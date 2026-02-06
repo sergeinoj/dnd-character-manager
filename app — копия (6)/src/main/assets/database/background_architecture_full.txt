@@ -1,0 +1,157 @@
+==================================================================================
+D&D 5.1 SRD: BACKGROUND DEEP ARCHITECTURE MAP (v1.26)
+Full Branch Resolution: Background -> Linked Features -> Choice Logic
+==================================================================================
+
+BACKGROUND: АРТИСТ (artist)
+Starting Gold: 15 gp
+    STATIC EQUIPMENT: [{'index': 'clothes-fine', 'quantity': 1}]
+    RESOLVING LINKED FEATURES (3 branches):
+    -> BRANCH: [bgf-artist-lore] По многочисленным просьбам
+       UI_GROUP: GENERAL
+    -> BRANCH: [bgf-artist-skills] Владения предыстории
+       UI_GROUP: SKILLS
+       >>> REFERENCE DATA: {"granted_proficiencies": [{"index": "acrobatics", "name": "Акробатика"}, {"index": "performance", "name": "Выступление"}, {"index": "disguise-kit", "name": "Набор для грима"}]}
+    -> BRANCH: [bgf-artist-equip] Снаряжение предыстории
+       UI_GROUP: INVENTORY
+       >>> CHOICE LOGIC: {"choose": 1, "type": "instruments", "from": {"option_set_type": "equipment_category", "equipment_category": {"index": "musical-instruments"}}}
+    FLUFF TABLES: Traits(2) | Ideals(1) | Bonds(1) | Flaws(1)
+--------------------------------------------------------------------------------
+
+BACKGROUND: БЕСПРИЗОРНИК (urchin)
+Starting Gold: 10 gp
+    STATIC EQUIPMENT: [{'index': 'knife-small', 'quantity': 1}, {'index': 'map-city', 'quantity': 1}]
+    RESOLVING LINKED FEATURES (2 branches):
+    -> BRANCH: [bgf-urchin-lore] Городские тайны
+       UI_GROUP: GENERAL
+    -> BRANCH: [bgf-urchin-skills] Владения предыстории
+       UI_GROUP: SKILLS
+       >>> REFERENCE DATA: {"granted_proficiencies": [{"index": "sleight-of-hand", "name": "Ловкость рук"}, {"index": "stealth", "name": "Скрытность"}, {"index": "thieves-tools", "name": "Воровские инструменты"}]}
+    FLUFF TABLES: Traits(2) | Ideals(1) | Bonds(1) | Flaws(1)
+--------------------------------------------------------------------------------
+
+BACKGROUND: БЛАГОРОДНЫЙ (noble)
+Starting Gold: 25 gp
+    STATIC EQUIPMENT: [{'index': 'signet-ring', 'quantity': 1}, {'index': 'clothes-fine', 'quantity': 1}]
+    RESOLVING LINKED FEATURES (3 branches):
+    -> BRANCH: [bgf-noble-lore] Привилегированность
+       UI_GROUP: GENERAL
+    -> BRANCH: [bgf-noble-skills] Владения предыстории
+       UI_GROUP: SKILLS
+       >>> REFERENCE DATA: {"granted_proficiencies": [{"index": "history", "name": "История"}, {"index": "persuasion", "name": "Убеждение"}]}
+    -> BRANCH: [bgf-noble-langs] Языки предыстории
+       UI_GROUP: SKILLS
+       >>> CHOICE LOGIC: {"choose": 1, "type": "languages", "from": {"option_set_type": "resource_list"}}
+    FLUFF TABLES: Traits(2) | Ideals(1) | Bonds(1) | Flaws(1)
+--------------------------------------------------------------------------------
+
+BACKGROUND: ГИЛЬДЕЙСКИЙ РЕМЕСЛЕННИК (guild-artisan)
+Starting Gold: 15 gp
+    STATIC EQUIPMENT: [{'index': 'letter-of-introduction', 'quantity': 1}]
+    RESOLVING LINKED FEATURES (3 branches):
+    -> BRANCH: [bgf-guild-artisan-lore] Членство в гильдии
+       UI_GROUP: GENERAL
+    -> BRANCH: [bgf-guild-artisan-skills] Владения предыстории
+       UI_GROUP: SKILLS
+       >>> REFERENCE DATA: {"granted_proficiencies": [{"index": "insight", "name": "Проницательность"}, {"index": "persuasion", "name": "Убеждение"}]}
+    -> BRANCH: [bgf-guild-artisan-equip] Снаряжение предыстории
+       UI_GROUP: INVENTORY
+       >>> CHOICE LOGIC: {"choose": 1, "type": "artisan-tools", "from": {"option_set_type": "equipment_category", "equipment_category": {"index": "artisan-tools"}}}
+    FLUFF TABLES: Traits(2) | Ideals(1) | Bonds(1) | Flaws(1)
+--------------------------------------------------------------------------------
+
+BACKGROUND: МОРЯК (sailor)
+Starting Gold: 10 gp
+    STATIC EQUIPMENT: [{'index': 'silk-rope-50-feet', 'quantity': 1}]
+    RESOLVING LINKED FEATURES (2 branches):
+    -> BRANCH: [bgf-sailor-lore] Поездка на корабле
+       UI_GROUP: GENERAL
+    -> BRANCH: [bgf-sailor-skills] Владения предыстории
+       UI_GROUP: SKILLS
+       >>> REFERENCE DATA: {"granted_proficiencies": [{"index": "athletics", "name": "Атлетика"}, {"index": "perception", "name": "Внимательность"}, {"index": "navigators-tools", "name": "Инструменты навигатора"}]}
+    FLUFF TABLES: Traits(2) | Ideals(1) | Bonds(1) | Flaws(1)
+--------------------------------------------------------------------------------
+
+BACKGROUND: МУДРЕЦ (sage)
+Starting Gold: 10 gp
+    STATIC EQUIPMENT: [{'index': 'ink-1-ounce-bottle', 'quantity': 1}, {'index': 'quill', 'quantity': 1}]
+    RESOLVING LINKED FEATURES (3 branches):
+    -> BRANCH: [bgf-sage-lore] Исследователь
+       UI_GROUP: GENERAL
+    -> BRANCH: [bgf-sage-skills] Владения предыстории
+       UI_GROUP: SKILLS
+       >>> REFERENCE DATA: {"granted_proficiencies": [{"index": "arcana", "name": "Магия"}, {"index": "history", "name": "История"}]}
+    -> BRANCH: [bgf-sage-langs] Языки предыстории
+       UI_GROUP: SKILLS
+       >>> CHOICE LOGIC: {"choose": 2, "type": "languages", "from": {"option_set_type": "resource_list"}}
+    FLUFF TABLES: Traits(2) | Ideals(1) | Bonds(1) | Flaws(1)
+--------------------------------------------------------------------------------
+
+BACKGROUND: ПОСЛУШНИК (acolyte)
+Starting Gold: 0 gp
+    STATIC EQUIPMENT: [{'index': 'clothes-common', 'quantity': 1}, {'index': 'pouch', 'quantity': 1}]
+    RESOLVING LINKED FEATURES (3 branches):
+    -> BRANCH: [bgf-acolyte-lore] Приют верных
+       UI_GROUP: GENERAL
+    -> BRANCH: [bgf-acolyte-skills] Владения предыстории
+       UI_GROUP: SKILLS
+       >>> REFERENCE DATA: {"granted_proficiencies": [{"index": "insight", "name": "Проницательность"}, {"index": "religion", "name": "Религия"}]}
+    -> BRANCH: [bgf-acolyte-langs] Языки предыстории
+       UI_GROUP: SKILLS
+       >>> CHOICE LOGIC: {"choose": 2, "type": "languages", "from": {"option_set_type": "resource_list"}}
+    FLUFF TABLES: Traits(2) | Ideals(1) | Bonds(1) | Flaws(1)
+--------------------------------------------------------------------------------
+
+BACKGROUND: ПРЕСТУПНИК (criminal)
+Starting Gold: 15 gp
+    STATIC EQUIPMENT: [{'index': 'crowbar', 'quantity': 1}, {'index': 'clothes-common', 'quantity': 1}]
+    RESOLVING LINKED FEATURES (2 branches):
+    -> BRANCH: [bgf-criminal-lore] Криминальные связи
+       UI_GROUP: GENERAL
+    -> BRANCH: [bgf-criminal-skills] Владения предыстории
+       UI_GROUP: SKILLS
+       >>> REFERENCE DATA: {"granted_proficiencies": [{"index": "deception", "name": "Обман"}, {"index": "stealth", "name": "Скрытность"}, {"index": "thieves-tools", "name": "Воровские инструменты"}]}
+    FLUFF TABLES: Traits(2) | Ideals(1) | Bonds(1) | Flaws(1)
+--------------------------------------------------------------------------------
+
+BACKGROUND: СОЛДАТ (soldier)
+Starting Gold: 10 gp
+    STATIC EQUIPMENT: [{'index': 'insignia-of-rank', 'quantity': 1}]
+    RESOLVING LINKED FEATURES (3 branches):
+    -> BRANCH: [bgf-soldier-lore] Воинское звание
+       UI_GROUP: GENERAL
+    -> BRANCH: [bgf-soldier-skills] Владения предыстории
+       UI_GROUP: SKILLS
+       >>> REFERENCE DATA: {"granted_proficiencies": [{"index": "athletics", "name": "Атлетика"}, {"index": "intimidation", "name": "Запугивание"}]}
+    -> BRANCH: [bgf-soldier-equip] Снаряжение предыстории
+       UI_GROUP: INVENTORY
+       >>> CHOICE LOGIC: {"choose": 1, "type": "gaming-sets", "from": {"option_set_type": "equipment_category", "equipment_category": {"index": "gaming-sets"}}}
+    FLUFF TABLES: Traits(2) | Ideals(1) | Bonds(1) | Flaws(1)
+--------------------------------------------------------------------------------
+
+BACKGROUND: ЧУЖЕЗЕМЕЦ (outlander)
+Starting Gold: 10 gp
+    STATIC EQUIPMENT: [{'index': 'staff', 'quantity': 1}, {'index': 'hunting-trap', 'quantity': 1}]
+    RESOLVING LINKED FEATURES (3 branches):
+    -> BRANCH: [bgf-outlander-lore] Странник
+       UI_GROUP: GENERAL
+    -> BRANCH: [bgf-outlander-skills] Владения предыстории
+       UI_GROUP: SKILLS
+       >>> REFERENCE DATA: {"granted_proficiencies": [{"index": "athletics", "name": "Атлетика"}, {"index": "survival", "name": "Выживание"}]}
+    -> BRANCH: [bgf-outlander-langs] Языки предыстории
+       UI_GROUP: SKILLS
+       >>> CHOICE LOGIC: {"choose": 1, "type": "languages", "from": {"option_set_type": "resource_list"}}
+    FLUFF TABLES: Traits(2) | Ideals(1) | Bonds(1) | Flaws(1)
+--------------------------------------------------------------------------------
+
+BACKGROUND: ШАРЛАТАН (charlatan)
+Starting Gold: 15 gp
+    STATIC EQUIPMENT: [{'index': 'clothes-fine', 'quantity': 1}]
+    RESOLVING LINKED FEATURES (2 branches):
+    -> BRANCH: [bgf-charlatan-lore] Поддельная личность
+       UI_GROUP: GENERAL
+    -> BRANCH: [bgf-charlatan-skills] Владения предыстории
+       UI_GROUP: SKILLS
+       >>> REFERENCE DATA: {"granted_proficiencies": [{"index": "deception", "name": "Обман"}, {"index": "sleight-of-hand", "name": "Ловкость рук"}, {"index": "disguise-kit", "name": "Набор для грима"}, {"index": "forgery-kit", "name": "Набор для фальсификации"}]}
+    FLUFF TABLES: Traits(2) | Ideals(1) | Bonds(1) | Flaws(1)
+--------------------------------------------------------------------------------

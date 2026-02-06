@@ -1,0 +1,203 @@
+=== D&D 5.1 SORCERER DATABASE AUDIT REPORT ===
+Database: dnd_clean.db
+
+--- 1. ТАБЛИЦА: classes ---
+id: 10
+index_name: sorcerer
+name: Чародей
+hit_die: 6
+proficiency_choices_json: [{"desc": "Выберите 2 навыка", "choose": 2, "type": "proficiencies", "from": {"option_set_type": "options_array", "options": [{"option_type": "reference", "item": {"index": "skill-arcana", "name": "Навык: Arcana"}}, {"option_type": "reference", "item": {"index": "skill-deception", "name": "Навык: Deception"}}, {"option_type": "reference", "item": {"index": "skill-insight", "name": "Навык: Insight"}}, {"option_type": "reference", "item": {"index": "skill-intimidation", "name": "Навык: Intimidation"}}, {"option_type": "reference", "item": {"index": "skill-persuasion", "name": "Навык: Persuasion"}}, {"option_type": "reference", "item": {"index": "skill-religion", "name": "Навык: Religion"}}]}}]
+proficiencies_json: [{"index": "daggers", "name": "Кинжалы"}, {"index": "darts", "name": "Дротики"}, {"index": "slings", "name": "Пращи"}, {"index": "quarterstaffs", "name": "Посохи"}, {"index": "crossbows-light", "name": "Арбалеты, лёгкие"}]
+saving_throws_json: [{"index": "con", "name": "ТЕЛ"}, {"index": "cha", "name": "ХАР"}]
+starting_equipment_json: [{"equipment": {"index": "dagger", "name": "Кинжал"}, "quantity": 2}]
+starting_equipment_options_json: [{"desc": "(a) лёгкий арбалет и 20 болтов или (b) любое простое оружие", "choose": 1, "type": "equipment", "from": {"option_set_type": "options_array", "options": [{"option_type": "multiple", "items": [{"option_type": "counted_reference", "count": 1, "of": {"index": "crossbow-light", "name": "Арбалет, лёгкий"}}, {"option_type": "counted_reference", "count": 20, "of": {"index": "crossbow-bolt", "name": "Арбалетный болт"}}]}, {"option_type": "choice", "choice": {"desc": "любое простое оружие", "choose": 1, "type": "equipment", "from": {"option_set_type": "equipment_category", "equipment_category": {"index": "simple-weapons", "name": "Простое оружие"}}}}]}}, {"desc": "(a) мешочек с компонентами или (b) мистический фокус", "choose": 1, "type": "equipment", "from": {"option_set_type": "options_array", "options": [{"option_type": "counted_reference", "count": 1, "of": {"index": "component-pouch", "name": "Мешочек с компонентами"}}, {"option_type": "choice", "choice": {"desc": "мистический фокус", "choose": 1, "type": "equipment", "from": {"option_set_type": "equipment_category", "equipment_category": {"index": "arcane-foci", "name": "Мистические фокусы"}}}}]}}, {"desc": "(a) набор исследователя подземелий или (b) набор путешественника", "choose": 1, "type": "equipment", "from": {"option_set_type": "options_array", "options": [{"option_type": "counted_reference", "count": 1, "of": {"index": "dungeoneers-pack", "name": "Набор исследователя подземелий"}}, {"option_type": "counted_reference", "count": 1, "of": {"index": "explorers-pack", "name": "Набор путешественника"}}]}}]
+spellcasting_json: {"spellcasting_ability": {"index": "cha", "name": "ХАР"}}
+class_levels_url: None
+multi_classing_json: {"prerequisites": [{"ability_score": {"index": "cha", "name": "ХАР"}, "minimum_score": 13}], "proficiencies": []}
+subclasses_json: [{"index": "draconic", "name": "Драконический"}, {"index": "wild-magic", "name": "Дикая магия"}]
+spells_url: None
+
+--- 2. ТАБЛИЦА: subclasses ---
+ID: draconic | Name: Драконий
+ID: wild-magic | Name: Дикая Магия
+
+--- 3. ТАБЛИЦА: progression (Поуровневый разбор) ---
+Level 1:
+  - Features JSON: ["spellcasting-sorcerer", "sorcerous-origin"]
+  - Spellcasting JSON: {"cantrips_known": 4, "spells_known": 2, "spell_slots_level_1": 2, "spell_slots_level_2": 0, "spell_slots_level_3": 0, "spell_slots_level_4": 0, "spell_slots_level_5": 0, "spell_slots_level_6": 0, "spell_slots_level_7": 0, "spell_slots_level_8": 0, "spell_slots_level_9": 0}
+Level 1:
+  - Features JSON: ["dragon-ancestor", "draconic-resilience"]
+  - Spellcasting JSON: None
+Level 1:
+  - Features JSON: ["sorcerer-wild-magic-surge", "sorcerer-tides-of-chaos"]
+  - Spellcasting JSON: None
+Level 2:
+  - Features JSON: ["font-of-magic"]
+  - Spellcasting JSON: {"cantrips_known": 4, "spells_known": 3, "spell_slots_level_1": 3, "spell_slots_level_2": 0, "spell_slots_level_3": 0, "spell_slots_level_4": 0, "spell_slots_level_5": 0, "spell_slots_level_6": 0, "spell_slots_level_7": 0, "spell_slots_level_8": 0, "spell_slots_level_9": 0}
+Level 3:
+  - Features JSON: ["metamagic"]
+  - Spellcasting JSON: {"cantrips_known": 4, "spells_known": 4, "spell_slots_level_1": 4, "spell_slots_level_2": 2, "spell_slots_level_3": 0, "spell_slots_level_4": 0, "spell_slots_level_5": 0, "spell_slots_level_6": 0, "spell_slots_level_7": 0, "spell_slots_level_8": 0, "spell_slots_level_9": 0}
+Level 4:
+  - Features JSON: ["ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 5, "spells_known": 5, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 0, "spell_slots_level_4": 0, "spell_slots_level_5": 0, "spell_slots_level_6": 0, "spell_slots_level_7": 0, "spell_slots_level_8": 0, "spell_slots_level_9": 0}
+Level 5:
+  - Features JSON: ["ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 5, "spells_known": 6, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 2, "spell_slots_level_4": 0, "spell_slots_level_5": 0, "spell_slots_level_6": 0, "spell_slots_level_7": 0, "spell_slots_level_8": 0, "spell_slots_level_9": 0}
+Level 6:
+  - Features JSON: ["ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 5, "spells_known": 7, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 3, "spell_slots_level_4": 0, "spell_slots_level_5": 0, "spell_slots_level_6": 0, "spell_slots_level_7": 0, "spell_slots_level_8": 0, "spell_slots_level_9": 0}
+Level 6:
+  - Features JSON: ["elemental-affinity"]
+  - Spellcasting JSON: None
+Level 6:
+  - Features JSON: ["sorcerer-bend-luck"]
+  - Spellcasting JSON: None
+Level 7:
+  - Features JSON: ["ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 5, "spells_known": 8, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 3, "spell_slots_level_4": 1, "spell_slots_level_5": 0, "spell_slots_level_6": 0, "spell_slots_level_7": 0, "spell_slots_level_8": 0, "spell_slots_level_9": 0}
+Level 8:
+  - Features JSON: ["ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 5, "spells_known": 9, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 3, "spell_slots_level_4": 2, "spell_slots_level_5": 0, "spell_slots_level_6": 0, "spell_slots_level_7": 0, "spell_slots_level_8": 0, "spell_slots_level_9": 0}
+Level 9:
+  - Features JSON: ["ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 5, "spells_known": 10, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 3, "spell_slots_level_4": 3, "spell_slots_level_5": 1, "spell_slots_level_6": 0, "spell_slots_level_7": 0, "spell_slots_level_8": 0, "spell_slots_level_9": 0}
+Level 10:
+  - Features JSON: ["metamagic-improvement-1", "ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 6, "spells_known": 11, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 3, "spell_slots_level_4": 3, "spell_slots_level_5": 2, "spell_slots_level_6": 0, "spell_slots_level_7": 0, "spell_slots_level_8": 0, "spell_slots_level_9": 0}
+Level 11:
+  - Features JSON: ["ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 6, "spells_known": 12, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 3, "spell_slots_level_4": 3, "spell_slots_level_5": 2, "spell_slots_level_6": 1, "spell_slots_level_7": 0, "spell_slots_level_8": 0, "spell_slots_level_9": 0}
+Level 12:
+  - Features JSON: ["ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 6, "spells_known": 12, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 3, "spell_slots_level_4": 3, "spell_slots_level_5": 2, "spell_slots_level_6": 1, "spell_slots_level_7": 0, "spell_slots_level_8": 0, "spell_slots_level_9": 0}
+Level 13:
+  - Features JSON: ["ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 6, "spells_known": 13, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 3, "spell_slots_level_4": 3, "spell_slots_level_5": 2, "spell_slots_level_6": 1, "spell_slots_level_7": 1, "spell_slots_level_8": 0, "spell_slots_level_9": 0}
+Level 14:
+  - Features JSON: ["ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 6, "spells_known": 13, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 3, "spell_slots_level_4": 3, "spell_slots_level_5": 2, "spell_slots_level_6": 1, "spell_slots_level_7": 1, "spell_slots_level_8": 0, "spell_slots_level_9": 0}
+Level 14:
+  - Features JSON: ["dragon-wings"]
+  - Spellcasting JSON: None
+Level 14:
+  - Features JSON: ["sorcerer-controlled-chaos"]
+  - Spellcasting JSON: None
+Level 15:
+  - Features JSON: ["ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 6, "spells_known": 14, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 3, "spell_slots_level_4": 3, "spell_slots_level_5": 2, "spell_slots_level_6": 1, "spell_slots_level_7": 1, "spell_slots_level_8": 1, "spell_slots_level_9": 0}
+Level 16:
+  - Features JSON: ["ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 6, "spells_known": 14, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 3, "spell_slots_level_4": 3, "spell_slots_level_5": 2, "spell_slots_level_6": 1, "spell_slots_level_7": 1, "spell_slots_level_8": 1, "spell_slots_level_9": 0}
+Level 17:
+  - Features JSON: ["metamagic-improvement-2", "ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 6, "spells_known": 15, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 3, "spell_slots_level_4": 3, "spell_slots_level_5": 2, "spell_slots_level_6": 1, "spell_slots_level_7": 1, "spell_slots_level_8": 1, "spell_slots_level_9": 1}
+Level 18:
+  - Features JSON: ["ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 6, "spells_known": 15, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 3, "spell_slots_level_4": 3, "spell_slots_level_5": 3, "spell_slots_level_6": 1, "spell_slots_level_7": 1, "spell_slots_level_8": 1, "spell_slots_level_9": 1}
+Level 18:
+  - Features JSON: ["draconic-presence"]
+  - Spellcasting JSON: None
+Level 18:
+  - Features JSON: ["sorcerer-spell-bombardment"]
+  - Spellcasting JSON: None
+Level 19:
+  - Features JSON: ["ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 6, "spells_known": 15, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 3, "spell_slots_level_4": 3, "spell_slots_level_5": 3, "spell_slots_level_6": 2, "spell_slots_level_7": 1, "spell_slots_level_8": 1, "spell_slots_level_9": 1}
+Level 20:
+  - Features JSON: ["sorcerous-restoration", "ability-score-improvement"]
+  - Spellcasting JSON: {"cantrips_known": 6, "spells_known": 15, "spell_slots_level_1": 4, "spell_slots_level_2": 3, "spell_slots_level_3": 3, "spell_slots_level_4": 3, "spell_slots_level_5": 3, "spell_slots_level_6": 2, "spell_slots_level_7": 2, "spell_slots_level_8": 1, "spell_slots_level_9": 1}
+
+--- 4. ТАБЛИЦА: features (Детализация способностей) ---
+Index: ability-score-improvement | Name: Увеличение характеристик / Черта | UI_Group: GENERAL
+  - Choices: {"choose": 1, "type": "asi_or_feat", "from": {"option_set_type": "options_array", "options": [{"option_type": "ability_score_increase", "points": 2}, {"option_type": "feat_choice", "from": {"resource": "general_feats"}}]}}
+------------------------------
+Index: draconic-presence | Name: Драконье присутствие | UI_Group: GENERAL
+------------------------------
+Index: draconic-resilience | Name: Драконья устойчивость | UI_Group: GENERAL
+------------------------------
+Index: dragon-ancestor | Name: Драконий предок | UI_Group: GENERAL
+  - Choices: {"choose": 1, "type": "dragon_color", "from": [{"value": "dragon-ancestor-black---acid-damage", "label": "Чёрный (Кислота)"}, {"value": "dragon-ancestor-blue---lightning-damage", "label": "Синий (Электричество)"}, {"value": "dragon-ancestor-brass---fire-damage", "label": "Латунный (Огонь)"}, {"value": "dragon-ancestor-bronze---lightning-damage", "label": "Бронзовый (Электричество)"}, {"value": "dragon-ancestor-copper---acid-damage", "label": "Медный (Кислота)"}, {"value": "dragon-ancestor-gold---fire-damage", "label": "Золотой (Огонь)"}, {"value": "dragon-ancestor-green---poison-damage", "label": "Зелёный (Яд)"}, {"value": "dragon-ancestor-red---fire-damage", "label": "Красный (Огонь)"}, {"value": "dragon-ancestor-silver---cold-damage", "label": "Серебряный (Холод)"}, {"value": "dragon-ancestor-white---cold-damage", "label": "Белый (Холод)"}]}
+------------------------------
+Index: dragon-wings | Name: Драконьи крылья | UI_Group: GENERAL
+------------------------------
+Index: elemental-affinity | Name: Сродство со стихиями | UI_Group: GENERAL
+------------------------------
+Index: flexible-casting-converting-spell-slot | Name: Гибкое колдовство: Преобразование ячейки заклинания | UI_Group: GENERAL
+------------------------------
+Index: flexible-casting-creating-spell-slots | Name: Гибкое колдовство: Создание ячеек заклинаний | UI_Group: GENERAL
+------------------------------
+Index: font-of-magic | Name: Источник магии | UI_Group: GENERAL
+------------------------------
+Index: metamagic | Name: Метамагия | UI_Group: GENERAL
+------------------------------
+Index: metamagic-1 | Name: Метамагия | UI_Group: GENERAL
+------------------------------
+Index: metamagic-2 | Name: Метамагия | UI_Group: GENERAL
+------------------------------
+Index: metamagic-3 | Name: Метамагия | UI_Group: GENERAL
+------------------------------
+Index: metamagic-careful-spell | Name: Метамагия: Осторожное заклинание | UI_Group: GENERAL
+------------------------------
+Index: metamagic-distant-spell | Name: Метамагия: Дальнее заклинание | UI_Group: GENERAL
+------------------------------
+Index: metamagic-empowered-spell | Name: Метамагия: Усиленное заклинание | UI_Group: GENERAL
+------------------------------
+Index: metamagic-extended-spell | Name: Метамагия: Удлинённое заклинание | UI_Group: GENERAL
+------------------------------
+Index: metamagic-heightened-spell | Name: Метамагия: Обострённое заклинание | UI_Group: GENERAL
+------------------------------
+Index: metamagic-improvement-1 | Name: Улучшение метамагии (10 уровень) | UI_Group: GENERAL
+------------------------------
+Index: metamagic-improvement-2 | Name: Улучшение метамагии (17 уровень) | UI_Group: GENERAL
+------------------------------
+Index: metamagic-quickened-spell | Name: Метамагия: Ускоренное заклинание | UI_Group: GENERAL
+------------------------------
+Index: metamagic-subtle-spell | Name: Метамагия: Скрытное заклинание | UI_Group: GENERAL
+------------------------------
+Index: metamagic-twinned-spell | Name: Метамагия: Сдвоенное заклинание | UI_Group: GENERAL
+------------------------------
+Index: sorcerer-bend-luck | Name: Подчинение удачи | UI_Group: GENERAL
+  - Choices: []
+  - Spell Show: []
+------------------------------
+Index: sorcerer-controlled-chaos | Name: Контролируемый хаос | UI_Group: GENERAL
+  - Choices: []
+  - Spell Show: []
+------------------------------
+Index: sorcerer-spell-bombardment | Name: Бомбардировка заклинаниями | UI_Group: GENERAL
+  - Choices: []
+  - Spell Show: []
+------------------------------
+Index: sorcerer-tides-of-chaos | Name: Поток хаоса | UI_Group: GENERAL
+  - Choices: []
+  - Spell Show: []
+------------------------------
+Index: sorcerer-wild-magic-surge | Name: Волна дикой магии | UI_Group: GENERAL
+------------------------------
+Index: sorcerous-origin | Name: Происхождение чародея | UI_Group: SUBCLASS_CHOICE
+  - Choices: {"choose": 1, "type": "subclass", "from": [{"index": "draconic", "name": "Драконья кровь"}, {"index": "wild-magic", "name": "Дикая магия"}]}
+------------------------------
+Index: sorcerous-origin-improvement-1 | Name: Особенность происхождения чародея | UI_Group: GENERAL
+------------------------------
+Index: sorcerous-origin-improvement-2 | Name: Особенность происхождения чародея | UI_Group: GENERAL
+------------------------------
+Index: sorcerous-origin-improvement-3 | Name: Особенность происхождения чародея | UI_Group: GENERAL
+------------------------------
+Index: sorcerous-restoration | Name: Чародейское восстановление | UI_Group: GENERAL
+------------------------------
+Index: spellcasting-sorcerer | Name: Использование заклинаний | UI_Group: SPELLS
+------------------------------
+
+--- 5. АНАЛИЗ ДУБЛИРОВАННЫХ ВЫБОРОВ МАГИИ ---
+--- 6. ТАБЛИЦА: spells (Привязка к классу) ---
+Всего заклинаний в списке чародея: 120
+  Level 0: 14 заклинаний
+  Level 1: 17 заклинаний
+  Level 2: 21 заклинаний
+  Level 3: 20 заклинаний
+  Level 4: 10 заклинаний
+  Level 5: 11 заклинаний
+  Level 6: 9 заклинаний
+  Level 7: 8 заклинаний
+  Level 8: 5 заклинаний
+  Level 9: 5 заклинаний

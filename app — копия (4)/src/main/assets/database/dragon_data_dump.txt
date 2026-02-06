@@ -1,0 +1,52 @@
+=== DATABASE DUMP FOR: Драконий предок (dragon-ancestor) ===
+
+--- COLUMN: choices_json ---
+{
+    "choose": 1,
+    "type": "dragon_color",
+    "from": [
+        {
+            "value": "dragon-ancestor-black---acid-damage",
+            "label": "Чёрный (Кислота)"
+        },
+        {
+            "value": "dragon-ancestor-blue---lightning-damage",
+            "label": "Синий (Электричество)"
+        },
+        {
+            "value": "dragon-ancestor-brass---fire-damage",
+            "label": "Латунный (Огонь)"
+        },
+        {
+            "value": "dragon-ancestor-bronze---lightning-damage",
+            "label": "Бронзовый (Электричество)"
+        },
+        {
+            "value": "dragon-ancestor-copper---acid-damage",
+            "label": "Медный (Кислота)"
+        },
+        {
+            "value": "dragon-ancestor-gold---fire-damage",
+            "label": "Золотой (Огонь)"
+        },
+        {
+            "value": "dragon-ancestor-green---poison-damage",
+            "label": "Зелёный (Яд)"
+        },
+        {
+            "value": "dragon-ancestor-red---fire-damage",
+            "label": "Красный (Огонь)"
+        },
+        {
+            "value": "dragon-ancestor-silver---cold-damage",
+            "label": "Серебряный (Холод)"
+        },
+        {
+            "value": "dragon-ancestor-white---cold-damage",
+            "label": "Белый (Холод)"
+        }
+    ]
+}
+
+--- COLUMN: reference_json (THE METADATA) ---
+"EMPTY"

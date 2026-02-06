@@ -1,0 +1,1018 @@
+=== D&D 5.1 SPELL RELATIONAL AUDIT ===
+
+ВСЕГО ЗАКЛИНАНИЙ В ТАБЛИЦЕ 'spells': 329
+ЗАКЛИНАНИЙ, УПОМЯНУТЫХ В ИГРОВОМ МИРЕ: 122
+НЕИСПОЛЬЗУЕМЫХ ЗАКЛИНАНИЙ (orphans): 207
+
+--- [!] КРИТИЧЕСКОЕ: ВОЗМОЖНЫЕ БИТЫЕ ССЫЛКИ ---
+(Строки, которые выглядят как заклинания, но отсутствуют в таблице spells)
+❌ 'necromancy'
+    Место: Таблица features -> Колонка choices_json -> Сущность: arcane-tradition
+❌ 'illusion'
+    Место: Таблица features -> Колонка choices_json -> Сущность: arcane-tradition
+❌ 'transmutation'
+    Место: Таблица features -> Колонка choices_json -> Сущность: arcane-tradition
+❌ 'conjuration'
+    Место: Таблица features -> Колонка choices_json -> Сущность: arcane-tradition
+❌ 'enchantment'
+    Место: Таблица features -> Колонка choices_json -> Сущность: arcane-tradition
+❌ 'subclass'
+    Место: Таблица features -> Колонка choices_json -> Сущность: arcane-tradition
+    Место: Таблица features -> Колонка choices_json -> Сущность: barbarian-primal-path
+    Место: Таблица features -> Колонка choices_json -> Сущность: bard-college
+    Место: Таблица features -> Колонка choices_json -> Сущность: divine-domain
+    Место: Таблица features -> Колонка choices_json -> Сущность: druid-druid-circle
+    Место: Таблица features -> Колонка choices_json -> Сущность: fighter-martial-archetype
+    Место: Таблица features -> Колонка choices_json -> Сущность: monastic-tradition
+    Место: Таблица features -> Колонка choices_json -> Сущность: otherworldly-patron
+    Место: Таблица features -> Колонка choices_json -> Сущность: paladin-sacred-oath
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-archetype
+    Место: Таблица features -> Колонка choices_json -> Сущность: rogue-roguish-archetype
+    Место: Таблица features -> Колонка choices_json -> Сущность: sorcerous-origin
+❌ 'evocation'
+    Место: Таблица features -> Колонка choices_json -> Сущность: arcane-tradition
+    Место: Таблица classes -> Колонка subclasses_json -> Сущность: wizard
+❌ 'abjuration'
+    Место: Таблица features -> Колонка choices_json -> Сущность: arcane-tradition
+❌ 'aspect-of-the-beast-eagle'
+    Место: Таблица features -> Колонка choices_json -> Сущность: aspect-of-the-beast
+❌ 'aspect-of-the-beast-wolf'
+    Место: Таблица features -> Колонка choices_json -> Сущность: aspect-of-the-beast
+❌ 'aspect-of-the-beast-bear'
+    Место: Таблица features -> Колонка choices_json -> Сущность: aspect-of-the-beast
+❌ 'berserker'
+    Место: Таблица features -> Колонка choices_json -> Сущность: barbarian-primal-path
+    Место: Таблица classes -> Колонка subclasses_json -> Сущность: barbarian
+❌ 'totem-warrior'
+    Место: Таблица features -> Колонка choices_json -> Сущность: barbarian-primal-path
+❌ 'lore'
+    Место: Таблица features -> Колонка choices_json -> Сущность: bard-college
+    Место: Таблица classes -> Колонка subclasses_json -> Сущность: bard
+❌ 'valor'
+    Место: Таблица features -> Колонка choices_json -> Сущность: bard-college
+❌ 'maneuver-riposte'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'Парирование'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'maneuver-sweeping-attack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'maneuver-goading-attack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'maneuver-commanders-strike'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'maneuver-disarming-attack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'Финт'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'maneuver-evasive-footwork'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'maneuver-maneuvering-attack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'Воодушевление'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'maneuver-menacing-attack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'maneuver-trip-attack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'maneuver-parry'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'maneuver-precision-attack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'maneuver-pushing-attack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'Выпад'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'maneuver-feinting-attack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'maneuver-lunging-attack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'maneuver-rally'
+    Место: Таблица features -> Колонка choices_json -> Сущность: battle-master-combat-superiority
+❌ 'spell'
+    Место: Таблица features -> Колонка choices_json -> Сущность: cleric-death-reaper
+    Место: Таблица features -> Колонка choices_json -> Сущность: cleric-nature-acolyte-of-nature
+    Место: Таблица features -> Колонка choices_json -> Сущность: high-elf-cantrip
+❌ 'Религия'
+    Место: Таблица features -> Колонка choices_json -> Сущность: cleric-knowledge-blessings-of-knowledge
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-druid-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-monk-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-paladin-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-sorcerer-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-warlock-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-wizard-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-acolyte-skills
+❌ 'language'
+    Место: Таблица features -> Колонка choices_json -> Сущность: cleric-knowledge-blessings-of-knowledge
+    Место: Таблица features -> Колонка choices_json -> Сущность: extra-language
+❌ 'Природа'
+    Место: Таблица features -> Колонка choices_json -> Сущность: cleric-knowledge-blessings-of-knowledge
+    Место: Таблица features -> Колонка choices_json -> Сущность: cleric-nature-acolyte-of-nature
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-barbarian-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-druid-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ranger-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-warlock-skills
+❌ 'История'
+    Место: Таблица features -> Колонка choices_json -> Сущность: cleric-knowledge-blessings-of-knowledge
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-monk-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-warlock-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-wizard-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-noble-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-sage-skills
+❌ 'Магия'
+    Место: Таблица features -> Колонка choices_json -> Сущность: cleric-knowledge-blessings-of-knowledge
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-druid-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-sorcerer-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-warlock-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-wizard-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-sage-skills
+❌ 'languages'
+    Место: Таблица features -> Колонка choices_json -> Сущность: cleric-knowledge-blessings-of-knowledge
+    Место: Таблица features -> Колонка choices_json -> Сущность: bgf-acolyte-langs
+    Место: Таблица features -> Колонка choices_json -> Сущность: bgf-outlander-langs
+    Место: Таблица features -> Колонка choices_json -> Сущность: bgf-noble-langs
+    Место: Таблица features -> Колонка choices_json -> Сущность: bgf-sage-langs
+    Место: Таблица features -> Колонка choices_json -> Сущность: extra-language
+❌ 'Выживание'
+    Место: Таблица features -> Колонка choices_json -> Сущность: cleric-nature-acolyte-of-nature
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-barbarian-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-druid-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ranger-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-outlander-skills
+❌ 'maneuvers'
+    Место: Таблица features -> Колонка choices_json -> Сущность: combat-superiority
+❌ 'elemental-disciplines'
+    Место: Таблица features -> Колонка choices_json -> Сущность: disciple-of-the-elements
+❌ 'tempest'
+    Место: Таблица features -> Колонка choices_json -> Сущность: divine-domain
+❌ 'trickery'
+    Место: Таблица features -> Колонка choices_json -> Сущность: divine-domain
+❌ 'nature'
+    Место: Таблица features -> Колонка choices_json -> Сущность: divine-domain
+❌ 'death'
+    Место: Таблица features -> Колонка choices_json -> Сущность: divine-domain
+❌ 'life'
+    Место: Таблица features -> Колонка choices_json -> Сущность: divine-domain
+    Место: Таблица classes -> Колонка subclasses_json -> Сущность: cleric
+❌ 'knowledge'
+    Место: Таблица features -> Колонка choices_json -> Сущность: divine-domain
+❌ 'dragon-ancestor-silver---cold-damage'
+    Место: Таблица features -> Колонка choices_json -> Сущность: dragon-ancestor
+❌ 'dragon-ancestor-red---fire-damage'
+    Место: Таблица features -> Колонка choices_json -> Сущность: dragon-ancestor
+❌ 'dragon-ancestor-black---acid-damage'
+    Место: Таблица features -> Колонка choices_json -> Сущность: dragon-ancestor
+❌ 'dragon-ancestor-green---poison-damage'
+    Место: Таблица features -> Колонка choices_json -> Сущность: dragon-ancestor
+❌ 'dragon-ancestor-brass---fire-damage'
+    Место: Таблица features -> Колонка choices_json -> Сущность: dragon-ancestor
+❌ 'dragon-ancestor-copper---acid-damage'
+    Место: Таблица features -> Колонка choices_json -> Сущность: dragon-ancestor
+❌ 'dragon-ancestor-gold---fire-damage'
+    Место: Таблица features -> Колонка choices_json -> Сущность: dragon-ancestor
+❌ 'dragon-ancestor-bronze---lightning-damage'
+    Место: Таблица features -> Колонка choices_json -> Сущность: dragon-ancestor
+❌ 'dragon-ancestor-blue---lightning-damage'
+    Место: Таблица features -> Колонка choices_json -> Сущность: dragon-ancestor
+❌ 'dragon-ancestor-white---cold-damage'
+    Место: Таблица features -> Колонка choices_json -> Сущность: dragon-ancestor
+❌ 'moon'
+    Место: Таблица features -> Колонка choices_json -> Сущность: druid-druid-circle
+❌ 'land'
+    Место: Таблица features -> Колонка choices_json -> Сущность: druid-druid-circle
+    Место: Таблица classes -> Колонка subclasses_json -> Сущность: druid
+❌ 'thunder'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-elemental-adept
+    Место: Таблица features -> Колонка choices_json -> Сущность: stone-resistance
+❌ 'cleric'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-magic-initiate
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ritual-caster
+❌ 'druid'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-magic-initiate
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ritual-caster
+❌ 'sorcerer'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-magic-initiate
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ritual-caster
+❌ 'bard'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-magic-initiate
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ritual-caster
+    Место: Таблица features -> Колонка choices_json -> Сущность: magical-secrets-1
+❌ 'wizard'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-magic-initiate
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ritual-caster
+❌ 'warlock'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-magic-initiate
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ritual-caster
+❌ 'Чемпион'
+    Место: Таблица features -> Колонка choices_json -> Сущность: fighter-martial-archetype
+    Место: Таблица classes -> Колонка subclasses_json -> Сущность: fighter
+❌ 'battle-master'
+    Место: Таблица features -> Колонка choices_json -> Сущность: fighter-martial-archetype
+❌ 'champion'
+    Место: Таблица features -> Колонка choices_json -> Сущность: fighter-martial-archetype
+    Место: Таблица classes -> Колонка subclasses_json -> Сущность: fighter
+❌ 'eldritch-knight'
+    Место: Таблица features -> Колонка choices_json -> Сущность: fighter-martial-archetype
+❌ 'skills'
+    Место: Таблица features -> Колонка choices_json -> Сущность: lore-bonus-proficiencies
+    Место: Таблица features -> Колонка reference_json -> Сущность: rangers-companion
+    Место: Таблица features -> Колонка reference_json -> Сущность: rogue-expertise-1
+    Место: Таблица features -> Колонка choices_json -> Сущность: skill-versatility
+    Место: Таблица features -> Колонка choices_json -> Сущность: human-variant-skill
+❌ 'four-elements'
+    Место: Таблица features -> Колонка choices_json -> Сущность: monastic-tradition
+❌ 'open-hand'
+    Место: Таблица features -> Колонка choices_json -> Сущность: monastic-tradition
+    Место: Таблица classes -> Колонка subclasses_json -> Сущность: monk
+❌ 'shadow'
+    Место: Таблица features -> Колонка choices_json -> Сущность: monastic-tradition
+❌ 'Архифея'
+    Место: Таблица features -> Колонка choices_json -> Сущность: otherworldly-patron
+❌ 'Бессмертный'
+    Место: Таблица features -> Колонка choices_json -> Сущность: otherworldly-patron
+❌ 'great-old-one'
+    Место: Таблица features -> Колонка choices_json -> Сущность: otherworldly-patron
+❌ 'archfey'
+    Место: Таблица features -> Колонка choices_json -> Сущность: otherworldly-patron
+❌ 'fiend'
+    Место: Таблица features -> Колонка choices_json -> Сущность: otherworldly-patron
+    Место: Таблица classes -> Колонка subclasses_json -> Сущность: warlock
+❌ 'undying'
+    Место: Таблица features -> Колонка choices_json -> Сущность: otherworldly-patron
+❌ 'Исчадие'
+    Место: Таблица features -> Колонка choices_json -> Сущность: otherworldly-patron
+    Место: Таблица classes -> Колонка subclasses_json -> Сущность: warlock
+❌ 'oathbreaker'
+    Место: Таблица features -> Колонка choices_json -> Сущность: paladin-sacred-oath
+❌ 'ancients'
+    Место: Таблица features -> Колонка choices_json -> Сущность: paladin-sacred-oath
+❌ 'Клятвопреступник'
+    Место: Таблица features -> Колонка choices_json -> Сущность: paladin-sacred-oath
+❌ 'devotion'
+    Место: Таблица features -> Колонка choices_json -> Сущность: paladin-sacred-oath
+    Место: Таблица classes -> Колонка subclasses_json -> Сущность: paladin
+❌ 'vengeance'
+    Место: Таблица features -> Колонка choices_json -> Сущность: paladin-sacred-oath
+❌ 'Охотник'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-archetype
+    Место: Таблица classes -> Колонка subclasses_json -> Сущность: ranger
+❌ 'hunter'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-archetype
+    Место: Таблица classes -> Колонка subclasses_json -> Сущность: ranger
+❌ 'beast-master'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-archetype
+❌ 'Гримлоки'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'dragonborn'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Гоблиноиды'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Звери'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Великаны'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'kobolds'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'gnolls'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Тифлинги'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Нежить'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'gnomes'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'grimlocks'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'tieflings'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'goblins'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Дварфы'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Конструкты'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Гномы'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Драконы'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Исчадия'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'halflings'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'orcs'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Растения'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Кобольды'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Люди'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Ящеролюды'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Драконорожденные'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Элементали'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'dwarves'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Эльфы'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Аберрации'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Небожители'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Слизи'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Орки'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'favored-enemy'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Гноллы'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'lizardfolk'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Чудовища'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'Полурослики'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'elves'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'humans'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-favored-enemy
+❌ 'hunter-steel-will'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-hunter-defensive-tactics
+❌ 'hunter-escape-the-horde'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-hunter-defensive-tactics
+❌ 'hunter-multiattack-defense'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-hunter-defensive-tactics
+❌ 'hunter-colossus-slayer'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-hunter-hunters-prey
+❌ 'hunter-horde-breaker'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-hunter-hunters-prey
+❌ 'hunter-giant-killer'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-hunter-hunters-prey
+❌ 'hunter-whirlwind-attack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-hunter-multiattack
+❌ 'Залп'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-hunter-multiattack
+❌ 'hunter-volley'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-hunter-multiattack
+❌ 'hunter-evasion'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-hunter-superior-hunters-defense
+❌ 'hunter-stand-against-the-tide'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-hunter-superior-hunters-defense
+❌ 'Уклонение'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-hunter-superior-hunters-defense
+❌ 'hunter-uncanny-dodge'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-hunter-superior-hunters-defense
+❌ 'Побережье'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-natural-explorer
+❌ 'Луга'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-natural-explorer
+❌ 'Пустыня'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-natural-explorer
+❌ 'natural-explorer'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-natural-explorer
+❌ 'Горы'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-natural-explorer
+❌ 'Болото'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-natural-explorer
+❌ 'underdark'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-natural-explorer
+❌ 'Подземье'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-natural-explorer
+❌ 'Арктика'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ranger-natural-explorer
+❌ 'medium'
+    Место: Таблица features -> Колонка choices_json -> Сущность: rangers-companion
+❌ 'beast'
+    Место: Таблица features -> Колонка choices_json -> Сущность: rangers-companion
+❌ 'Убийца'
+    Место: Таблица features -> Колонка choices_json -> Сущность: rogue-roguish-archetype
+❌ 'thief'
+    Место: Таблица features -> Колонка choices_json -> Сущность: rogue-roguish-archetype
+    Место: Таблица classes -> Колонка subclasses_json -> Сущность: rogue
+❌ 'arcane-trickster'
+    Место: Таблица features -> Колонка choices_json -> Сущность: rogue-roguish-archetype
+❌ 'assassin'
+    Место: Таблица features -> Колонка choices_json -> Сущность: rogue-roguish-archetype
+❌ 'wild-magic'
+    Место: Таблица features -> Колонка choices_json -> Сущность: sorcerous-origin
+    Место: Таблица classes -> Колонка subclasses_json -> Сущность: sorcerer
+❌ 'Огонь'
+    Место: Таблица features -> Колонка choices_json -> Сущность: stone-resistance
+❌ 'Звук'
+    Место: Таблица features -> Колонка choices_json -> Сущность: stone-resistance
+❌ 'Кислота'
+    Место: Таблица features -> Колонка choices_json -> Сущность: stone-resistance
+❌ 'Молния'
+    Место: Таблица features -> Колонка choices_json -> Сущность: stone-resistance
+❌ 'Холод'
+    Место: Таблица features -> Колонка choices_json -> Сущность: stone-resistance
+❌ 'artisans-tools'
+    Место: Таблица features -> Колонка choices_json -> Сущность: student-of-war
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-monk-tools
+❌ 'totem-spirit-wolf'
+    Место: Таблица features -> Колонка choices_json -> Сущность: totem-spirit
+❌ 'totem-spirit-bear'
+    Место: Таблица features -> Колонка choices_json -> Сущность: totem-spirit
+❌ 'totem-spirit-eagle'
+    Место: Таблица features -> Колонка choices_json -> Сущность: totem-spirit
+❌ 'totemic-attunement-eagle'
+    Место: Таблица features -> Колонка choices_json -> Сущность: totemic-attunement
+❌ 'totemic-attunement-bear'
+    Место: Таблица features -> Колонка choices_json -> Сущность: totemic-attunement
+❌ 'totemic-attunement-wolf'
+    Место: Таблица features -> Колонка choices_json -> Сущность: totemic-attunement
+❌ 'master-restore-youth'
+    Место: Таблица features -> Колонка choices_json -> Сущность: wizard-master-transmuter
+❌ 'master-major-transformation'
+    Место: Таблица features -> Колонка choices_json -> Сущность: wizard-master-transmuter
+❌ 'master-panacea'
+    Место: Таблица features -> Колонка choices_json -> Сущность: wizard-master-transmuter
+❌ 'master-restore-life'
+    Место: Таблица features -> Колонка choices_json -> Сущность: wizard-master-transmuter
+❌ 'third-eye-darkvision'
+    Место: Таблица features -> Колонка choices_json -> Сущность: wizard-the-third-eye
+❌ 'third-eye-invisibility'
+    Место: Таблица features -> Колонка choices_json -> Сущность: wizard-the-third-eye
+❌ 'third-eye-ethereal'
+    Место: Таблица features -> Колонка choices_json -> Сущность: wizard-the-third-eye
+❌ 'third-eye-comprehension'
+    Место: Таблица features -> Колонка choices_json -> Сущность: wizard-the-third-eye
+❌ 'stone-darkvision'
+    Место: Таблица features -> Колонка choices_json -> Сущность: wizard-transmuters-stone
+❌ 'stone-con-save'
+    Место: Таблица features -> Колонка choices_json -> Сущность: wizard-transmuters-stone
+❌ 'stone-resistance'
+    Место: Таблица features -> Колонка choices_json -> Сущность: wizard-transmuters-stone
+❌ 'stone-speed'
+    Место: Таблица features -> Колонка choices_json -> Сущность: wizard-transmuters-stone
+❌ 'Запугивание'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-barbarian-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-paladin-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-sorcerer-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-warlock-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-soldier-skills
+❌ 'Внимательность'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-barbarian-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-druid-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ranger-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-sailor-skills
+❌ 'Атлетика'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-barbarian-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-monk-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-paladin-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ranger-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-outlander-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-sailor-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-soldier-skills
+❌ 'Анализ'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ranger-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-warlock-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-wizard-skills
+❌ 'Медицина'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-druid-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-paladin-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-wizard-skills
+❌ 'Скрытность'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-monk-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ranger-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-criminal-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-urchin-skills
+❌ 'Проницательность'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-druid-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-monk-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-paladin-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ranger-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-sorcerer-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-wizard-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-acolyte-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-guild-artisan-skills
+❌ 'Убеждение'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-paladin-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-sorcerer-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-guild-artisan-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-noble-skills
+❌ 'Акробатика'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-monk-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-artist-skills
+❌ 'Выступление'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-skills
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-artist-skills
+❌ 'musical-instruments'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-tools
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-monk-tools
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-equip-3
+    Место: Таблица features -> Колонка choices_json -> Сущность: bgf-artist-equip
+❌ 'Обман'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-charlatan-skills
+    Место: Таблица features -> Колонка reference_json -> Сущность: bgf-criminal-skills
+❌ 'martial-melee-weapons'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-barbarian-equip-1
+❌ 'greataxe'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-barbarian-equip-1
+❌ 'simple-weapons'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-barbarian-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-equip-1
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-equip-3
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-druid-equip-1
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-monk-equip-1
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-paladin-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-sorcerer-equip-1
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-warlock-equip-1
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-warlock-equip-4
+❌ 'handaxe'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-barbarian-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-equip-3
+❌ 'Рапира'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-equip-1
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-equip-1
+❌ 'longsword'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-equip-1
+❌ 'rapier'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-equip-1
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-equip-1
+❌ 'diplomats-pack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-equip-2
+❌ 'entertainers-pack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-equip-2
+❌ 'lute'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-equip-3
+❌ 'Лютня'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-bard-equip-3
+❌ 'mace'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-equip-1
+❌ 'Булава'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-equip-1
+❌ 'warhammer'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-equip-1
+❌ 'Кольчуга'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-equip-1
+❌ 'chain-mail'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-equip-1
+❌ 'scale-mail'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ranger-equip-1
+❌ 'leather-armor'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ranger-equip-1
+❌ 'bundle-crossbow-light-crossbow-bolt'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-equip-3
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-equip-3
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-sorcerer-equip-1
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-warlock-equip-1
+❌ 'explorers-pack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-equip-4
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-equip-4
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-monk-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-paladin-equip-3
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ranger-equip-3
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-equip-3
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-sorcerer-equip-3
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-wizard-equip-3
+❌ 'priests-pack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-equip-4
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-paladin-equip-3
+❌ 'holy-symbols'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-cleric-equip-5
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-paladin-equip-4
+❌ 'Ятаган'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-druid-equip-2
+❌ 'scimitar'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-druid-equip-2
+❌ 'simple-melee-weapons'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-druid-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ranger-equip-2
+❌ 'druidic-foci'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-druid-equip-3
+❌ 'bundle-leather-armor-longbow-arrow'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-equip-1
+❌ 'bundle-shield'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-paladin-equip-1
+❌ 'martial-weapons'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-paladin-equip-1
+❌ 'dungeoneers-pack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-fighter-equip-4
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-monk-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ranger-equip-3
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-equip-3
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-sorcerer-equip-3
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-warlock-equip-3
+❌ 'shortsword'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-monk-equip-1
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-ranger-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-equip-1
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-equip-2
+❌ 'javelin'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-paladin-equip-2
+❌ 'bundle-shortbow-arrow'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-equip-2
+❌ 'burglars-pack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-rogue-equip-3
+❌ 'component-pouch'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-sorcerer-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-warlock-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-wizard-equip-2
+❌ 'arcane-foci'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-sorcerer-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-warlock-equip-2
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-wizard-equip-2
+❌ 'scholars-pack'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-warlock-equip-3
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-wizard-equip-3
+❌ 'Кинжал'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-wizard-equip-1
+❌ 'quarterstaff'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-wizard-equip-1
+❌ 'Посох'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-wizard-equip-1
+❌ 'dagger'
+    Место: Таблица features -> Колонка choices_json -> Сущность: feat-wizard-equip-1
+❌ 'instruments'
+    Место: Таблица features -> Колонка choices_json -> Сущность: bgf-artist-equip
+❌ 'artisan-tools'
+    Место: Таблица features -> Колонка choices_json -> Сущность: bgf-guild-artisan-equip
+❌ 'gaming-sets'
+    Место: Таблица features -> Колонка choices_json -> Сущность: bgf-soldier-equip
+❌ 'smiths-tools'
+    Место: Таблица features -> Колонка choices_json -> Сущность: tool-proficiency
+❌ 'masons-tools'
+    Место: Таблица features -> Колонка choices_json -> Сущность: tool-proficiency
+❌ 'brewers-supplies'
+    Место: Таблица features -> Колонка choices_json -> Сущность: tool-proficiency
+❌ 'feat'
+    Место: Таблица features -> Колонка choices_json -> Сущность: human-variant-feat
+❌ 'Интеллект'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ability-score-choice-half-elf
+    Место: Таблица features -> Колонка choices_json -> Сущность: human-variant-ability-choice
+❌ 'Ловкость'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ability-score-choice-half-elf
+    Место: Таблица features -> Колонка choices_json -> Сущность: human-variant-ability-choice
+❌ 'Мудрость'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ability-score-choice-half-elf
+    Место: Таблица features -> Колонка choices_json -> Сущность: human-variant-ability-choice
+❌ 'Телосложение'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ability-score-choice-half-elf
+    Место: Таблица features -> Колонка choices_json -> Сущность: human-variant-ability-choice
+❌ 'Сила'
+    Место: Таблица features -> Колонка choices_json -> Сущность: ability-score-choice-half-elf
+    Место: Таблица features -> Колонка choices_json -> Сущность: human-variant-ability-choice
+❌ 'Харизма'
+    Место: Таблица features -> Колонка choices_json -> Сущность: human-variant-ability-choice
+
+--- [OK] КАРТА УПОМИНАНИЙ ЗАКЛИНАНИЙ ---
+✨ animal-friendship (1 упоминаний)
+    └─ nature-domain-spells-lvl1 (features.spell_show_json)
+✨ animate-dead (2 упоминаний)
+    └─ death-domain-spells-lvl5 (features.spell_show_json)
+    └─ oathbreaker-domain-spells-lvl9 (features.spell_show_json)
+✨ antilife-shell (1 упоминаний)
+    └─ death-domain-spells-lvl9 (features.spell_show_json)
+✨ arcane-eye (1 упоминаний)
+    └─ knowledge-domain-spells-lvl7 (features.spell_show_json)
+✨ augury (1 упоминаний)
+    └─ knowledge-domain-spells-lvl3 (features.spell_show_json)
+✨ bane (1 упоминаний)
+    └─ vengeance-domain-spells-lvl3 (features.spell_show_json)
+✨ banishment (1 упоминаний)
+    └─ vengeance-domain-spells-lvl13 (features.spell_show_json)
+✨ barkskin (1 упоминаний)
+    └─ nature-domain-spells-lvl3 (features.spell_show_json)
+✨ beacon-of-hope (2 упоминаний)
+    └─ devotion-domain-spells-lvl9 (features.spell_show_json)
+    └─ life-domain-spells-lvl5 (features.spell_show_json)
+✨ beast-sense (1 упоминаний)
+    └─ spirit-seeker (features.spell_show_json)
+✨ bestow-curse (1 упоминаний)
+    └─ oathbreaker-domain-spells-lvl9 (features.spell_show_json)
+✨ bless (1 упоминаний)
+    └─ life-domain-spells-lvl1 (features.spell_show_json)
+✨ blight (2 упоминаний)
+    └─ death-domain-spells-lvl7 (features.spell_show_json)
+    └─ oathbreaker-domain-spells-lvl13 (features.spell_show_json)
+✨ blindness-deafness (2 упоминаний)
+    └─ death-domain-spells-lvl3 (features.spell_show_json)
+    └─ fiend-domain-spells-lvl3 (features.spell_show_json)
+✨ blink (2 упоминаний)
+    └─ archfey-domain-spells-lvl5 (features.spell_show_json)
+    └─ trickery-domain-spells-lvl5 (features.spell_show_json)
+✨ burning-hands (3 упоминаний)
+    └─ elemental-discipline-burning-hands (features.spell_show_json)
+    └─ fiend-domain-spells-lvl1 (features.spell_show_json)
+    └─ light-domain-spells-lvl1 (features.spell_show_json)
+✨ call-lightning (1 упоминаний)
+    └─ tempest-domain-spells-lvl5 (features.spell_show_json)
+✨ calm-emotions (1 упоминаний)
+    └─ archfey-domain-spells-lvl3 (features.spell_show_json)
+✨ charm-person (1 упоминаний)
+    └─ trickery-domain-spells-lvl1 (features.spell_show_json)
+✨ clairvoyance (1 упоминаний)
+    └─ great-old-one-domain-spells-lvl5 (features.spell_show_json)
+✨ cloudkill (1 упоминаний)
+    └─ death-domain-spells-lvl9 (features.spell_show_json)
+✨ command (2 упоминаний)
+    └─ fiend-domain-spells-lvl1 (features.spell_show_json)
+    └─ knowledge-domain-spells-lvl1 (features.spell_show_json)
+✨ commune (1 упоминаний)
+    └─ devotion-domain-spells-lvl17 (features.spell_show_json)
+✨ commune-with-nature (2 упоминаний)
+    └─ ancients-domain-spells-lvl17 (features.spell_show_json)
+    └─ spirit-walker (features.spell_show_json)
+✨ cone-of-cold (1 упоминаний)
+    └─ elemental-discipline-breath-of-winter (features.spell_show_json)
+✨ confusion (2 упоминаний)
+    └─ knowledge-domain-spells-lvl7 (features.spell_show_json)
+    └─ oathbreaker-domain-spells-lvl13 (features.spell_show_json)
+✨ contagion (1 упоминаний)
+    └─ oathbreaker-domain-spells-lvl17 (features.spell_show_json)
+✨ control-water (1 упоминаний)
+    └─ tempest-domain-spells-lvl7 (features.spell_show_json)
+✨ crown-of-madness (1 упоминаний)
+    └─ oathbreaker-domain-spells-lvl5 (features.spell_show_json)
+✨ crusaders-mantle (1 упоминаний)
+    └─ war-domain-spells-lvl5 (features.spell_show_json)
+✨ cure-wounds (1 упоминаний)
+    └─ life-domain-spells-lvl1 (features.spell_show_json)
+✨ dancing-lights (1 упоминаний)
+    └─ drow-magic (features.spell_show_json)
+✨ darkness (4 упоминаний)
+    └─ drow-magic (features.spell_show_json)
+    └─ infernal-legacy (features.spell_show_json)
+    └─ oathbreaker-domain-spells-lvl5 (features.spell_show_json)
+    └─ shadow-arts (features.spell_show_json)
+✨ darkvision (9 упоминаний)
+    └─ dwarf (races.traits_json)
+    └─ elf (races.traits_json)
+    └─ gnome (races.traits_json)
+    └─ half-elf (races.traits_json)
+    └─ half-orc (races.traits_json)
+    └─ shadow-arts (features.spell_show_json)
+    └─ stone-darkvision (features.reference_json)
+    └─ third-eye-darkvision (features.reference_json)
+    └─ tiefling (races.traits_json)
+✨ daylight (1 упоминаний)
+    └─ light-domain-spells-lvl5 (features.spell_show_json)
+✨ death-ward (2 упоминаний)
+    └─ death-domain-spells-lvl7 (features.spell_show_json)
+    └─ life-domain-spells-lvl7 (features.spell_show_json)
+✨ destructive-wave (1 упоминаний)
+    └─ tempest-domain-spells-lvl9 (features.spell_show_json)
+✨ detect-thoughts (1 упоминаний)
+    └─ great-old-one-domain-spells-lvl3 (features.spell_show_json)
+✨ dimension-door (2 упоминаний)
+    └─ trickery-domain-spells-lvl7 (features.spell_show_json)
+    └─ vengeance-domain-spells-lvl13 (features.spell_show_json)
+✨ disguise-self (1 упоминаний)
+    └─ trickery-domain-spells-lvl1 (features.spell_show_json)
+✨ dispel-magic (2 упоминаний)
+    └─ devotion-domain-spells-lvl9 (features.spell_show_json)
+    └─ trickery-domain-spells-lvl5 (features.spell_show_json)
+✨ dissonant-whispers (1 упоминаний)
+    └─ great-old-one-domain-spells-lvl1 (features.spell_show_json)
+✨ divination (1 упоминаний)
+    └─ arcane-tradition (features.choices_json)
+✨ divine-favor (1 упоминаний)
+    └─ war-domain-spells-lvl1 (features.spell_show_json)
+✨ dominate-beast (3 упоминаний)
+    └─ archfey-domain-spells-lvl7 (features.spell_show_json)
+    └─ great-old-one-domain-spells-lvl7 (features.spell_show_json)
+    └─ nature-domain-spells-lvl7 (features.spell_show_json)
+✨ dominate-person (4 упоминаний)
+    └─ archfey-domain-spells-lvl9 (features.spell_show_json)
+    └─ great-old-one-domain-spells-lvl9 (features.spell_show_json)
+    └─ oathbreaker-domain-spells-lvl17 (features.spell_show_json)
+    └─ trickery-domain-spells-lvl9 (features.spell_show_json)
+✨ ensnaring-strike (1 упоминаний)
+    └─ ancients-domain-spells-lvl3 (features.spell_show_json)
+✨ evards-black-tentacles (1 упоминаний)
+    └─ great-old-one-domain-spells-lvl7 (features.spell_show_json)
+✨ faerie-fire (3 упоминаний)
+    └─ archfey-domain-spells-lvl1 (features.spell_show_json)
+    └─ drow-magic (features.spell_show_json)
+    └─ light-domain-spells-lvl1 (features.spell_show_json)
+✨ false-life (2 упоминаний)
+    └─ death-domain-spells-lvl1 (features.spell_show_json)
+    └─ undying-domain-spells-lvl1 (features.spell_show_json)
+✨ fire-shield (1 упоминаний)
+    └─ fiend-domain-spells-lvl7 (features.spell_show_json)
+✨ fireball (3 упоминаний)
+    └─ elemental-discipline-flames-of-the-phoenix (features.spell_show_json)
+    └─ fiend-domain-spells-lvl5 (features.spell_show_json)
+    └─ light-domain-spells-lvl5 (features.spell_show_json)
+✨ flame-strike (4 упоминаний)
+    └─ devotion-domain-spells-lvl17 (features.spell_show_json)
+    └─ fiend-domain-spells-lvl9 (features.spell_show_json)
+    └─ light-domain-spells-lvl9 (features.spell_show_json)
+    └─ war-domain-spells-lvl9 (features.spell_show_json)
+✨ flaming-sphere (1 упоминаний)
+    └─ light-domain-spells-lvl3 (features.spell_show_json)
+✨ fly (1 упоминаний)
+    └─ elemental-discipline-ride-the-wind (features.spell_show_json)
+✨ fog-cloud (1 упоминаний)
+    └─ tempest-domain-spells-lvl1 (features.spell_show_json)
+✨ freedom-of-movement (2 упоминаний)
+    └─ devotion-domain-spells-lvl13 (features.spell_show_json)
+    └─ war-domain-spells-lvl7 (features.spell_show_json)
+✨ gaseous-form (1 упоминаний)
+    └─ elemental-discipline-mist-stance (features.spell_show_json)
+✨ grasping-vine (1 упоминаний)
+    └─ nature-domain-spells-lvl7 (features.spell_show_json)
+✨ greater-invisibility (1 упоминаний)
+    └─ archfey-domain-spells-lvl7 (features.spell_show_json)
+✨ guardian-of-faith (3 упоминаний)
+    └─ devotion-domain-spells-lvl13 (features.spell_show_json)
+    └─ life-domain-spells-lvl7 (features.spell_show_json)
+    └─ light-domain-spells-lvl7 (features.spell_show_json)
+✨ gust-of-wind (1 упоминаний)
+    └─ tempest-domain-spells-lvl3 (features.spell_show_json)
+✨ hallow (1 упоминаний)
+    └─ fiend-domain-spells-lvl9 (features.spell_show_json)
+✨ haste (1 упоминаний)
+    └─ vengeance-domain-spells-lvl9 (features.spell_show_json)
+✨ hellish-rebuke (2 упоминаний)
+    └─ infernal-legacy (features.spell_show_json)
+    └─ oathbreaker-domain-spells-lvl3 (features.spell_show_json)
+✨ hideous-laughter (1 упоминаний)
+    └─ great-old-one-domain-spells-lvl1 (features.spell_show_json)
+✨ hold-monster (2 упоминаний)
+    └─ vengeance-domain-spells-lvl17 (features.spell_show_json)
+    └─ war-domain-spells-lvl9 (features.spell_show_json)
+✨ hold-person (2 упоминаний)
+    └─ elemental-discipline-clench-of-the-north-wind (features.spell_show_json)
+    └─ vengeance-domain-spells-lvl5 (features.spell_show_json)
+✨ hunters-mark (1 упоминаний)
+    └─ vengeance-domain-spells-lvl3 (features.spell_show_json)
+✨ ice-storm (2 упоминаний)
+    └─ ancients-domain-spells-lvl13 (features.spell_show_json)
+    └─ tempest-domain-spells-lvl7 (features.spell_show_json)
+✨ identify (1 упоминаний)
+    └─ knowledge-domain-spells-lvl1 (features.spell_show_json)
+✨ inflict-wounds (1 упоминаний)
+    └─ oathbreaker-domain-spells-lvl3 (features.spell_show_json)
+✨ insect-plague (2 упоминаний)
+    └─ nature-domain-spells-lvl9 (features.spell_show_json)
+    └─ tempest-domain-spells-lvl9 (features.spell_show_json)
+✨ legend-lore (1 упоминаний)
+    └─ knowledge-domain-spells-lvl9 (features.spell_show_json)
+✨ lesser-restoration (2 упоминаний)
+    └─ devotion-domain-spells-lvl5 (features.spell_show_json)
+    └─ life-domain-spells-lvl3 (features.spell_show_json)
+✨ light (1 упоминаний)
+    └─ divine-domain (features.choices_json)
+✨ magic-weapon (1 упоминаний)
+    └─ war-domain-spells-lvl3 (features.spell_show_json)
+✨ mass-cure-wounds (1 упоминаний)
+    └─ life-domain-spells-lvl9 (features.spell_show_json)
+✨ minor-illusion (3 упоминаний)
+    └─ natural-illusionist (features.spell_show_json)
+    └─ shadow-arts (features.spell_show_json)
+    └─ wizard-improved-minor-illusion (features.spell_show_json)
+✨ mirror-image (1 упоминаний)
+    └─ trickery-domain-spells-lvl3 (features.spell_show_json)
+✨ misty-step (2 упоминаний)
+    └─ ancients-domain-spells-lvl5 (features.spell_show_json)
+    └─ vengeance-domain-spells-lvl5 (features.spell_show_json)
+✨ modify-memory (1 упоминаний)
+    └─ trickery-domain-spells-lvl9 (features.spell_show_json)
+✨ moonbeam (1 упоминаний)
+    └─ ancients-domain-spells-lvl5 (features.spell_show_json)
+✨ nondetection (1 упоминаний)
+    └─ knowledge-domain-spells-lvl5 (features.spell_show_json)
+✨ pass-without-trace (2 упоминаний)
+    └─ shadow-arts (features.spell_show_json)
+    └─ trickery-domain-spells-lvl3 (features.spell_show_json)
+✨ phantasmal-force (2 упоминаний)
+    └─ archfey-domain-spells-lvl3 (features.spell_show_json)
+    └─ great-old-one-domain-spells-lvl3 (features.spell_show_json)
+✨ plant-growth (3 упоминаний)
+    └─ ancients-domain-spells-lvl9 (features.spell_show_json)
+    └─ archfey-domain-spells-lvl5 (features.spell_show_json)
+    └─ nature-domain-spells-lvl5 (features.spell_show_json)
+✨ polymorph (2 упоминаний)
+    └─ trickery-domain-spells-lvl7 (features.spell_show_json)
+    └─ wizard-shapechanger (features.spell_show_json)
+✨ protection-from-energy (2 упоминаний)
+    └─ ancients-domain-spells-lvl9 (features.spell_show_json)
+    └─ vengeance-domain-spells-lvl9 (features.spell_show_json)
+✨ protection-from-evil-and-good (1 упоминаний)
+    └─ devotion-domain-spells-lvl3 (features.spell_show_json)
+✨ raise-dead (1 упоминаний)
+    └─ life-domain-spells-lvl9 (features.spell_show_json)
+✨ ray-of-enfeeblement (1 упоминаний)
+    └─ death-domain-spells-lvl3 (features.spell_show_json)
+✨ ray-of-sickness (2 упоминаний)
+    └─ death-domain-spells-lvl1 (features.spell_show_json)
+    └─ undying-domain-spells-lvl1 (features.spell_show_json)
+✨ revivify (1 упоминаний)
+    └─ life-domain-spells-lvl5 (features.spell_show_json)
+✨ sanctuary (1 упоминаний)
+    └─ devotion-domain-spells-lvl3 (features.spell_show_json)
+✨ scorching-ray (2 упоминаний)
+    └─ fiend-domain-spells-lvl3 (features.spell_show_json)
+    └─ light-domain-spells-lvl3 (features.spell_show_json)
+✨ scrying (3 упоминаний)
+    └─ knowledge-domain-spells-lvl9 (features.spell_show_json)
+    └─ light-domain-spells-lvl9 (features.spell_show_json)
+    └─ vengeance-domain-spells-lvl17 (features.spell_show_json)
+✨ seeming (1 упоминаний)
+    └─ archfey-domain-spells-lvl9 (features.spell_show_json)
+✨ sending (1 упоминаний)
+    └─ great-old-one-domain-spells-lvl5 (features.spell_show_json)
+✨ shatter (2 упоминаний)
+    └─ elemental-discipline-gong-of-the-summit (features.spell_show_json)
+    └─ tempest-domain-spells-lvl3 (features.spell_show_json)
+✨ shield (3 упоминаний)
+    └─ feat-druid-equip-1 (features.choices_json)
+    └─ fighting-style-protection (features.reference_json)
+    └─ style-protection (features.reference_json)
+✨ shield-of-faith (1 упоминаний)
+    └─ war-domain-spells-lvl1 (features.spell_show_json)
+✨ silence (1 упоминаний)
+    └─ shadow-arts (features.spell_show_json)
+✨ sleep (1 упоминаний)
+    └─ archfey-domain-spells-lvl1 (features.spell_show_json)
+✨ sleet-storm (1 упоминаний)
+    └─ tempest-domain-spells-lvl5 (features.spell_show_json)
+✨ spare-the-dying (1 упоминаний)
+    └─ undying-domain-spells-lvl1 (features.spell_show_json)
+✨ speak-with-animals (3 упоминаний)
+    └─ ancients-domain-spells-lvl3 (features.spell_show_json)
+    └─ nature-domain-spells-lvl1 (features.spell_show_json)
+    └─ spirit-seeker (features.spell_show_json)
+✨ speak-with-dead (1 упоминаний)
+    └─ knowledge-domain-spells-lvl5 (features.spell_show_json)
+✨ spike-growth (1 упоминаний)
+    └─ nature-domain-spells-lvl3 (features.spell_show_json)
+✨ spirit-guardians (1 упоминаний)
+    └─ war-domain-spells-lvl5 (features.spell_show_json)
+✨ spiritual-weapon (2 упоминаний)
+    └─ life-domain-spells-lvl3 (features.spell_show_json)
+    └─ war-domain-spells-lvl3 (features.spell_show_json)
+✨ stinking-cloud (1 упоминаний)
+    └─ fiend-domain-spells-lvl5 (features.spell_show_json)
+✨ stoneskin (3 упоминаний)
+    └─ ancients-domain-spells-lvl13 (features.spell_show_json)
+    └─ elemental-discipline-eternal-mountain-defense (features.spell_show_json)
+    └─ war-domain-spells-lvl7 (features.spell_show_json)
+✨ suggestion (2 упоминаний)
+    └─ cleric-knowledge-channel-divinity-read-thoughts (features.spell_show_json)
+    └─ knowledge-domain-spells-lvl3 (features.spell_show_json)
+✨ telekinesis (1 упоминаний)
+    └─ great-old-one-domain-spells-lvl9 (features.spell_show_json)
+✨ thaumaturgy (1 упоминаний)
+    └─ infernal-legacy (features.spell_show_json)
+✨ thunderwave (1 упоминаний)
+    └─ tempest-domain-spells-lvl1 (features.spell_show_json)
+✨ tree-stride (2 упоминаний)
+    └─ ancients-domain-spells-lvl17 (features.spell_show_json)
+    └─ nature-domain-spells-lvl9 (features.spell_show_json)
+✨ vampiric-touch (1 упоминаний)
+    └─ death-domain-spells-lvl5 (features.spell_show_json)
+✨ wall-of-fire (3 упоминаний)
+    └─ elemental-discipline-river-of-hungry-flame (features.spell_show_json)
+    └─ fiend-domain-spells-lvl7 (features.spell_show_json)
+    └─ light-domain-spells-lvl7 (features.spell_show_json)
+✨ wind-wall (1 упоминаний)
+    └─ nature-domain-spells-lvl5 (features.spell_show_json)
+✨ zone-of-truth (1 упоминаний)
+    └─ devotion-domain-spells-lvl5 (features.spell_show_json)

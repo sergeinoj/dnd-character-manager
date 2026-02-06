@@ -1,0 +1,367 @@
+[
+  {
+    "index_name": "acolyte",
+    "name": "Послушник",
+    "starting_proficiencies_json": null,
+    "language_options_json": null,
+    "starting_equipment_json": [
+      {
+        "equipment": {
+          "index": "clothes-common",
+          "name": "Одежда, обычная"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "pouch",
+          "name": "Мешочек"
+        },
+        "quantity": 1
+      }
+    ],
+    "feature_index": "bgf-acolyte-lore,bgf-acolyte-skills,bgf-acolyte-langs",
+    "feature_name": "Приют верных",
+    "feature_desc": "Как послушник, вы пользуетесь уважением тех, кто разделяет вашу веру. Вы и ваши спутники можете рассчитывать на бесплатное исцеление и уход в храмах вашей веры.",
+    "personality_traits_json": "[\"Я боготворю определённого героя своей веры и постоянно ссылаюсь на его пример.\", \"Я вижу знамения в каждом событии. Боги говорят с нами, нужно лишь слушать.\"]",
+    "ideals_json": "[\"Милосердие. Я всегда стараюсь помочь нуждающимся.\"]",
+    "bonds_json": "[\"Я сделаю всё, чтобы защитить храм, в котором я служил.\"]",
+    "flaws_json": "[\"Я слишком доверяю тем, кто обладает властью в моей церкви.\"]",
+    "starting_equipment_options_json": null
+  },
+  {
+    "index_name": "artist",
+    "name": "Артист",
+    "starting_proficiencies_json": null,
+    "language_options_json": null,
+    "starting_equipment_json": [
+      {
+        "equipment": {
+          "index": "costume",
+          "name": "Костюм"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "gold",
+          "name": "Золотые монеты"
+        },
+        "quantity": 15
+      }
+    ],
+    "feature_index": "bgf-artist-lore,bgf-artist-skills,bgf-artist-equip",
+    "feature_name": "По многочисленным просьбам",
+    "feature_desc": "Вы всегда можете найти место для выступления. В этом месте вы получаете бесплатный постой и еду, если выступаете каждый вечер.",
+    "personality_traits_json": "[\"Я знаю историю на любой случай и готов рассказать её каждому.\", \"Я становлюсь крайне подавленным, если долго не нахожусь в центре внимания.\"]",
+    "ideals_json": "[\"Творчество. Искусство важнее законов и ограничений.\"]",
+    "bonds_json": "[\"Мой инструмент — моё самое дорогое достояние, и я не расстанусь с ним никогда.\"]",
+    "flaws_json": "[\"Я сделаю что угодно ради славы и признания.\"]",
+    "starting_equipment_options_json": null
+  },
+  {
+    "index_name": "charlatan",
+    "name": "Шарлатан",
+    "starting_proficiencies_json": null,
+    "language_options_json": null,
+    "starting_equipment_json": [
+      {
+        "equipment": {
+          "index": "clothes-fine",
+          "name": "Костюм отличного качества"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "gold",
+          "name": "Золотые монеты"
+        },
+        "quantity": 15
+      }
+    ],
+    "feature_index": "bgf-charlatan-lore,bgf-charlatan-skills",
+    "feature_name": "Поддельная личность",
+    "feature_desc": "Вы создали себе вторую личность. В дополнение к этому вы можете подделывать документы и письма.",
+    "personality_traits_json": "[\"Я всегда держу под рукой план на случай, если всё пойдёт не так.\", \"Я мастер лести и умею заставить любого чувствовать себя особенным.\"]",
+    "ideals_json": "[\"Независимость. Я принадлежу только себе и никому больше.\"]",
+    "bonds_json": "[\"Где-то далеко живет человек, которого я обманул, и теперь я должен искупить свою вину.\"]",
+    "flaws_json": "[\"Я не могу удержаться от азартных игр, если вижу возможность быстро разбогатеть.\"]",
+    "starting_equipment_options_json": null
+  },
+  {
+    "index_name": "criminal",
+    "name": "Преступник",
+    "starting_proficiencies_json": null,
+    "language_options_json": null,
+    "starting_equipment_json": [
+      {
+        "equipment": {
+          "index": "crowbar",
+          "name": "Ломик"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "clothes-common",
+          "name": "Темная одежда с капюшоном"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "gold",
+          "name": "Золотые монеты"
+        },
+        "quantity": 15
+      }
+    ],
+    "feature_index": "bgf-criminal-lore,bgf-criminal-skills",
+    "feature_name": "Криминальные связи",
+    "feature_desc": "У вас есть надёжное доверенное лицо, которое выступает в роли вашего связного в криминальных кругах.",
+    "personality_traits_json": "[\"Я всегда холоден и спокоен, даже в самой опасной ситуации.\", \"Я не доверяю никому, кроме моих ближайших соратников.\"]",
+    "ideals_json": "[\"Честь. Среди воров тоже есть правила, и я их соблюдаю.\"]",
+    "bonds_json": "[\"Я пытаюсь заработать достаточно денег, чтобы выкупить свободу своего близкого человека.\"]",
+    "flaws_json": "[\"Если я вижу что-то ценное, я не могу удержаться, чтобы не украсть это.\"]",
+    "starting_equipment_options_json": null
+  },
+  {
+    "index_name": "outlander",
+    "name": "Чужеземец",
+    "starting_proficiencies_json": null,
+    "language_options_json": null,
+    "starting_equipment_json": [
+      {
+        "equipment": {
+          "index": "staff",
+          "name": "Посох"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "hunting-trap",
+          "name": "Капкан"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "gold",
+          "name": "Золотые монеты"
+        },
+        "quantity": 10
+      }
+    ],
+    "feature_index": "bgf-outlander-lore,bgf-outlander-skills,bgf-outlander-langs",
+    "feature_name": "Странник",
+    "feature_desc": "Вы отлично запоминаете карты и местность. Вы каждый день можете находить еду и пресную воду для себя и пяти других товарищей.",
+    "personality_traits_json": "[\"Я чувствую себя неуютно в больших городах и мечтаю вернуться в дикие земли.\", \"Природа гораздо надежнее, чем любой человек, которого я встречал.\"]",
+    "ideals_json": "[\"Природа. Мы должны защищать мир от разрушительного влияния цивилизации.\"]",
+    "bonds_json": "[\"Я последний из своего племени, и я должен прославить их имена своими деяниями.\"]",
+    "flaws_json": "[\"Я слишком прямолинеен и часто оскорбляю городских жителей своим поведением.\"]",
+    "starting_equipment_options_json": null
+  },
+  {
+    "index_name": "guild-artisan",
+    "name": "Гильдейский ремесленник",
+    "starting_proficiencies_json": null,
+    "language_options_json": null,
+    "starting_equipment_json": [
+      {
+        "equipment": {
+          "index": "letter-of-introduction",
+          "name": "Рекомендательное письмо"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "gold",
+          "name": "Золотые монеты"
+        },
+        "quantity": 15
+      }
+    ],
+    "feature_index": "bgf-guild-artisan-lore,bgf-guild-artisan-skills,bgf-guild-artisan-equip",
+    "feature_name": "Членство в гильдии",
+    "feature_desc": "Будучи членом гильдии, вы можете пользоваться особыми преимуществами. Ваши товарищи предоставят вам жилище и питание.",
+    "personality_traits_json": "[\"Я перфекционист и всегда стремлюсь к созданию идеального изделия.\", \"Я верю, что всё в этом мире имеет свою цену.\"]",
+    "ideals_json": "[\"Сообщество. Мы должны поддерживать друг друга, чтобы процветать.\"]",
+    "bonds_json": "[\"Я задолжал гильдии большую сумму денег, и должен её вернуть.\"]",
+    "flaws_json": "[\"Я быстро теряю интерес к людям, которые не разбираются в моем ремесле.\"]",
+    "starting_equipment_options_json": null
+  },
+  {
+    "index_name": "noble",
+    "name": "Благородный",
+    "starting_proficiencies_json": null,
+    "language_options_json": null,
+    "starting_equipment_json": [
+      {
+        "equipment": {
+          "index": "signet-ring",
+          "name": "Кольцо-печатка"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "clothes-fine",
+          "name": "Комплект отличной одежды"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "gold",
+          "name": "Золотые монеты"
+        },
+        "quantity": 25
+      }
+    ],
+    "feature_index": "bgf-noble-lore,bgf-noble-skills,bgf-noble-langs",
+    "feature_name": "Привилегированность",
+    "feature_desc": "Благодаря знатному происхождению, вас принимают в высшем обществе. Обыватели стараются сделать вам приятно.",
+    "personality_traits_json": "[\"Я считаю своим долгом защищать тех, кто ниже меня по положению.\", \"Мои манеры безупречны, и я ожидаю того же от окружающих.\"]",
+    "ideals_json": "[\"Благородство. Моё имя обязывает меня вести себя достойно.\"]",
+    "bonds_json": "[\"Моя семья — это самое важное, и я восстановлю наше доброе имя.\"]",
+    "flaws_json": "[\"Я тайно верю, что все остальные — лишь инструменты для достижения моих целей.\"]",
+    "starting_equipment_options_json": null
+  },
+  {
+    "index_name": "sage",
+    "name": "Мудрец",
+    "starting_proficiencies_json": null,
+    "language_options_json": null,
+    "starting_equipment_json": [
+      {
+        "equipment": {
+          "index": "ink-1-ounce-bottle",
+          "name": "Бутылочка чернил"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "quill",
+          "name": "Писчее перо"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "gold",
+          "name": "Золотые монеты"
+        },
+        "quantity": 10
+      }
+    ],
+    "feature_index": "bgf-sage-lore,bgf-sage-skills,bgf-sage-langs",
+    "feature_name": "Исследователь",
+    "feature_desc": "Если вы пытаетесь изучить информацию, которой не обладаете, вы часто знаете, где и от кого её можно получить.",
+    "personality_traits_json": "[\"Я склонен объяснять очевидные вещи слишком долго и нудно.\", \"Я прочитал каждую книгу в величайших библиотеках мира... или хотя бы сделал вид.\"]",
+    "ideals_json": "[\"Знания. Путь к истине лежит через постоянное обучение.\"]",
+    "bonds_json": "[\"Я ищу ответ на вопрос, который поставил в тупик моего наставника.\"]",
+    "flaws_json": "[\"Я часто забываю о реальности, погружаясь в свои исследования.\"]",
+    "starting_equipment_options_json": null
+  },
+  {
+    "index_name": "sailor",
+    "name": "Моряк",
+    "starting_proficiencies_json": null,
+    "language_options_json": null,
+    "starting_equipment_json": [
+      {
+        "equipment": {
+          "index": "silk-rope-50-feet",
+          "name": "Шелковая веревка (50 фт)"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "gold",
+          "name": "Золотые монеты"
+        },
+        "quantity": 10
+      }
+    ],
+    "feature_index": "bgf-sailor-lore,bgf-sailor-skills",
+    "feature_name": "Поездка на корабле",
+    "feature_desc": "Если понадобится, вы можете получить бесплатную поездку на паруснике для себя и своих спутников.",
+    "personality_traits_json": "[\"Я всегда использую морские метафоры в разговоре.\", \"Мой голос всегда звучит так, будто я пытаюсь перекричать шторм.\"]",
+    "ideals_json": "[\"Свобода. Море — это единственное место, где человек по-настоящему свободен.\"]",
+    "bonds_json": "[\"Я готов на всё ради своего корабля и его команды.\"]",
+    "flaws_json": "[\"Когда я на суше, я начинаю слишком много пить от скуки.\"]",
+    "starting_equipment_options_json": null
+  },
+  {
+    "index_name": "soldier",
+    "name": "Солдат",
+    "starting_proficiencies_json": null,
+    "language_options_json": null,
+    "starting_equipment_json": [
+      {
+        "equipment": {
+          "index": "insignia-of-rank",
+          "name": "Знак отличия"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "gold",
+          "name": "Золотые монеты"
+        },
+        "quantity": 10
+      }
+    ],
+    "feature_index": "bgf-soldier-lore,bgf-soldier-skills,bgf-soldier-equip",
+    "feature_name": "Воинское звание",
+    "feature_desc": "Будучи солдатом, вы заслужили звание. Солдаты вашей организации до сих пор признают вашу власть.",
+    "personality_traits_json": "[\"Я всегда готов защитить тех, кто не может постоять за себя.\", \"Я привык к дисциплине и ожидаю её от каждого члена отряда.\"]",
+    "ideals_json": "[\"Ответственность. Я делаю то, что должен, ради общего блага.\"]",
+    "bonds_json": "[\"Я никогда не забуду своих павших товарищей.\"]",
+    "flaws_json": "[\"Моя слепая преданность приказам однажды привела к трагедии.\"]",
+    "starting_equipment_options_json": null
+  },
+  {
+    "index_name": "urchin",
+    "name": "Беспризорник",
+    "starting_proficiencies_json": null,
+    "language_options_json": null,
+    "starting_equipment_json": [
+      {
+        "equipment": {
+          "index": "knife-small",
+          "name": "Маленький нож"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "map-city",
+          "name": "Карта родного города"
+        },
+        "quantity": 1
+      },
+      {
+        "equipment": {
+          "index": "gold",
+          "name": "Золотые монеты"
+        },
+        "quantity": 10
+      }
+    ],
+    "feature_index": "bgf-urchin-lore,bgf-urchin-skills",
+    "feature_name": "Городские тайны",
+    "feature_desc": "Вы знаете тайные лазы городских улиц, позволяющие перемещаться по городу вдвое быстрее обычного.",
+    "personality_traits_json": "[\"Я сплю вполглаза и всегда начеку.\", \"Я ем быстро и жадно, как будто это мой последний обед.\"]",
+    "ideals_json": "[\"Выживание. В этом мире ты либо охотник, либо добыча.\"]",
+    "bonds_json": "[\"Я забочусь о других беспризорниках так, как никто не заботился обо мне.\"]",
+    "flaws_json": "[\"Я не доверяю никому, кто носит чистую одежду и имеет крышу над головой.\"]",
+    "starting_equipment_options_json": null
+  }
+]

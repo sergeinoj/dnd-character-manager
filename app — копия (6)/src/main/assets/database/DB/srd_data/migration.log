@@ -1,0 +1,23 @@
+2026-01-03 02:30:17,602 - INFO - Cleaned previous DB: dnd_clean.db
+2026-01-03 02:30:17,838 - INFO - SYSTEM READY. Database connected.
+2026-01-03 02:30:18,947 - INFO - DDL Schema applied successfully.
+2026-01-03 02:30:19,269 - INFO - Processed 873 features.
+2026-01-03 02:30:19,301 - INFO - Processing Enhanced Backgrounds...
+2026-01-03 02:30:19,363 - INFO - Backgrounds processed.
+2026-01-03 02:30:19,519 - INFO - Equipment split processed.
+2026-01-03 02:30:19,682 - INFO - Magic Items processed.
+2026-01-03 02:30:19,770 - INFO - Equipment Categories processed.
+2026-01-03 02:30:19,770 - INFO - Processing 5e-SRD-Alignments.json -> alignments
+2026-01-03 02:30:19,849 - INFO - Processing 5e-SRD-Classes.json -> classes
+2026-01-03 02:30:19,928 - INFO - Processing 5e-SRD-Damage-Types.json -> damage_types
+2026-01-03 02:30:19,995 - INFO - Processing 5e-SRD-Languages.json -> languages
+2026-01-03 02:30:20,070 - INFO - Processing 5e-SRD-Levels.json -> progression
+2026-01-03 02:30:20,187 - INFO - Processing 5e-SRD-Magic-Schools.json -> magic_schools
+2026-01-03 02:30:20,253 - INFO - Processing 5e-SRD-Proficiencies.json -> proficiencies
+2026-01-03 02:30:20,328 - INFO - Processing 5e-SRD-Races.json -> races
+2026-01-03 02:30:20,395 - INFO - Processing 5e-SRD-Skills.json -> skills
+2026-01-03 02:30:20,445 - INFO - Processing 5e-SRD-Spells.json -> spells
+2026-01-03 02:30:20,688 - INFO - Processing 5e-SRD-Subclasses.json -> subclasses
+2026-01-03 02:30:20,745 - INFO - Processing 5e-SRD-Subraces.json -> subraces
+2026-01-03 02:30:20,819 - INFO - Processing 5e-SRD-Weapon-Properties.json -> weapon_properties
+2026-01-03 02:30:21,098 - INFO - MIGRATION COMPLETE.

@@ -1,0 +1,192 @@
+[
+  {
+    "index_name": "hill-dwarf",
+    "race_index": "dwarf",
+    "name": "Холмовой дварф",
+    "description": "Как холмовой дварф, вы обладаете острым чутьём, глубокой интуицией и поразительной стойкостью. Ваша связь с землёй дарует вам крепость, превосходящую даже других дварфов.",
+    "ability_bonuses_json": [
+      {
+        "stat": "WIS",
+        "bonus": 1
+      }
+    ],
+    "traits_json": [
+      "dwarven-toughness"
+    ],
+    "starting_proficiencies_json": [],
+    "language_options_json": null
+  },
+  {
+    "index_name": "mountain-dwarf",
+    "race_index": "dwarf",
+    "name": "Горный дварф",
+    "description": "Как горный дварф, вы сильны и выносливы, привычны к трудностям жизни в суровых горах. Вы, вероятно, выше ростом (для дварфа) и более мускулисты.",
+    "ability_bonuses_json": [
+      {
+        "stat": "STR",
+        "bonus": 2
+      }
+    ],
+    "traits_json": [
+      "dwarven-armor-training"
+    ],
+    "starting_proficiencies_json": [],
+    "language_options_json": null
+  },
+  {
+    "index_name": "high-elf",
+    "race_index": "elf",
+    "name": "Высший эльф",
+    "description": "Как высший эльф, вы обладаете острым умом и знаете как минимум основы магии. Во многих мирах D&D есть два вида высших эльфов. Одни самонадеянны и замкнуты, другие более добры и открыты к общению с другими расами.",
+    "ability_bonuses_json": [
+      {
+        "stat": "INT",
+        "bonus": 1
+      }
+    ],
+    "traits_json": [
+      "elf-weapon-training",
+      "high-elf-cantrip",
+      "extra-language"
+    ],
+    "starting_proficiencies_json": [],
+    "language_options_json": null
+  },
+  {
+    "index_name": "wood-elf",
+    "race_index": "elf",
+    "name": "Лесной эльф",
+    "description": "Как лесной эльф, вы обладаете острыми чувствами и интуицией, а ваши быстрые ноги несут вас сквозь родные леса подобно ветру. Лесные эльфы — народ затворников, но их нельзя назвать недружелюбными.",
+    "ability_bonuses_json": [
+      {
+        "stat": "WIS",
+        "bonus": 1
+      }
+    ],
+    "traits_json": [
+      "elf-weapon-training",
+      "fleet-of-foot",
+      "mask-of-the-wild"
+    ],
+    "starting_proficiencies_json": [],
+    "language_options_json": null
+  },
+  {
+    "index_name": "dark-elf",
+    "race_index": "elf",
+    "name": "Тёмный эльф (Дроу)",
+    "description": "Проклятые или благословлённые — в зависимости от точки зрения — наследием Подземья, дроу являются хозяевами пещер, где царит вечная ночь. Их врождённая магия отражает эту тьму.",
+    "ability_bonuses_json": [
+      {
+        "stat": "CHA",
+        "bonus": 1
+      }
+    ],
+    "traits_json": [
+      "superior-darkvision",
+      "sunlight-sensitivity",
+      "drow-magic",
+      "drow-weapon-training"
+    ],
+    "starting_proficiencies_json": [],
+    "language_options_json": null
+  },
+  {
+    "index_name": "rock-gnome",
+    "race_index": "gnome",
+    "name": "Скальный гном",
+    "description": "Как скальный гном, вы обладаете природной изобретательностью и стойкостью, превосходящей стойкость других гномов. Большинство гномов в мирах D&D — скальные гномы.",
+    "ability_bonuses_json": [
+      {
+        "stat": "CON",
+        "bonus": 1
+      }
+    ],
+    "traits_json": [
+      "artificers-lore",
+      "tinker"
+    ],
+    "starting_proficiencies_json": [],
+    "language_options_json": null
+  },
+  {
+    "index_name": "forest-gnome",
+    "race_index": "gnome",
+    "name": "Лесной гном",
+    "description": "Как лесной гном, вы обладаете природным талантом к иллюзиям и врождённой быстротой. В мирах D&D лесные гномы — это редкость. Они живут в укромных лесных уголках, скрываясь от чужих глаз.",
+    "ability_bonuses_json": [
+      {
+        "stat": "DEX",
+        "bonus": 1
+      }
+    ],
+    "traits_json": [
+      "natural-illusionist",
+      "speak-with-small-beasts"
+    ],
+    "starting_proficiencies_json": [],
+    "language_options_json": null
+  },
+  {
+    "index_name": "lightfoot-halfling",
+    "race_index": "halfling",
+    "name": "Легконогий полурослик",
+    "description": "Легконогие полурослики — прирождённые путешественники, легко смешивающиеся с толпой и незаметные для других. Они более склонны к странствиям, чем другие полурослики.",
+    "ability_bonuses_json": [
+      {
+        "stat": "CHA",
+        "bonus": 1
+      }
+    ],
+    "traits_json": [
+      "naturally-stealthy"
+    ],
+    "starting_proficiencies_json": [],
+    "language_options_json": null
+  },
+  {
+    "index_name": "stout-halfling",
+    "race_index": "halfling",
+    "name": "Коренастый полурослик",
+    "description": "Коренастые полурослики крепче обычных и обладают некоторой устойчивостью к ядам. Поговаривают, что в их жилах течёт дварфская кровь.",
+    "ability_bonuses_json": [
+      {
+        "stat": "CON",
+        "bonus": 1
+      }
+    ],
+    "traits_json": [
+      "stout-resilience"
+    ],
+    "starting_proficiencies_json": [],
+    "language_options_json": null
+  },
+  {
+    "index_name": "human-variant",
+    "race_index": "human",
+    "name": "Альтернативный человек",
+    "description": "Если ваша кампания использует опциональное правило для черт, ваш Мастер может разрешить вам использовать эти альтернативные расовые особенности, которые отражают уникальный опыт и таланты вашего персонажа.",
+    "ability_bonuses_json": [],
+    "ability_bonus_options_json": {
+      "choose": 2,
+      "type": "ability_bonuses",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {"option_type": "ability_bonus", "item": {"index": "str", "name": "Сила"}},
+          {"option_type": "ability_bonus", "item": {"index": "dex", "name": "Ловкость"}},
+          {"option_type": "ability_bonus", "item": {"index": "con", "name": "Выносливость"}},
+          {"option_type": "ability_bonus", "item": {"index": "int", "name": "Интеллект"}},
+          {"option_type": "ability_bonus", "item": {"index": "wis", "name": "Мудрость"}},
+          {"option_type": "ability_bonus", "item": {"index": "cha", "name": "Харизма"}}
+        ]
+      }
+    },
+    "traits_json": [
+      "human-variant-feat",
+      "human-variant-skill"
+    ],
+    "starting_proficiencies_json": [],
+    "language_options_json": null
+  }
+]

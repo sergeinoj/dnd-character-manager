@@ -1,0 +1,107 @@
+=== D&D DATABASE DEEP INSPECTION: SORCERER LEVEL 1 ===
+--- STEP 1: PROGRESSION TABLE ---
+Зарегистрированные ID способностей для 1 уровня: ['spellcasting-sorcerer', 'sorcerous-origin', 'sorcerer-skill-choice-0', 'sorcerer-1-cantrip-choice', 'sorcerer-1-spell-choice']
+
+--- STEP 2: FEATURE DETAILS (FROM PROGRESSION LIST) ---
+ID: [spellcasting-sorcerer] | NAME: Использование заклинаний
+UI_GROUP: SPELLS
+CHOICES_JSON: [{"desc": "Выберите 4 заговора из списка заклинаний вашего класса.", "choose": 4, "type": "spell", "from": {"option_set_type": "spells_by_class_level", "level": 0}}, {"desc": "Выберите 2 заклинания 1-го уровня из списка заклинаний вашего класса.", "choose": 2, "type": "spell", "from": {"option_set_type": "spells_by_class_level", "level": 1}}]
+REFERENCE_JSON: {"spellcasting_ability": "cha", "feature_type": "spellcasting_base"}
+----------------------------------------
+ID: [sorcerous-origin] | NAME: Происхождение чародея
+UI_GROUP: SUBCLASS_CHOICE
+CHOICES_JSON: {"choose": 1, "type": "subclass", "from": [{"index": "draconic", "name": "Драконья кровь"}, {"index": "wild-magic", "name": "Дикая магия"}]}
+REFERENCE_JSON: None
+----------------------------------------
+ID: [sorcerer-skill-choice-0] | NAME: Навыки
+UI_GROUP: SKILLS
+CHOICES_JSON: {"desc": "Выберите два из: Магия, Обман, Проницательность, Запугивание, Убеждение и Религия", "choose": 2, "type": "proficiencies", "from": {"option_set_type": "options_array", "options": [{"option_type": "reference", "item": {"index": "skill-arcana", "name": "Навык: Магия"}}, {"option_type": "reference", "item": {"index": "skill-deception", "name": "Навык: Обман"}}, {"option_type": "reference", "item": {"index": "skill-insight", "name": "Навык: Проницательность"}}, {"option_type": "reference", "item": {"index": "skill-intimidation", "name": "Навык: Запугивание"}}, {"option_type": "reference", "item": {"index": "skill-persuasion", "name": "Навык: Убеждение"}}, {"option_type": "reference", "item": {"index": "skill-religion", "name": "Навык: Религия"}}]}}
+REFERENCE_JSON: None
+----------------------------------------
+ID: [sorcerer-1-cantrip-choice] | NAME: Заговоры
+UI_GROUP: SPELLS
+CHOICES_JSON: {"desc": "Выберите 4 заговора из списка заклинаний класса.", "choose": 4, "type": "spell", "from": {"option_set_type": "spells_by_class_level", "class": "sorcerer", "level": 0}}
+REFERENCE_JSON: None
+----------------------------------------
+ID: [sorcerer-1-spell-choice] | NAME: Известные заклинания (Ур. 1)
+UI_GROUP: SPELLS
+CHOICES_JSON: {"desc": "Выберите 2 заклинаний из списка заклинаний класса, доступных на этом уровне.", "choose": 2, "type": "spell", "from": {"option_set_type": "spells_by_class_level", "class": "sorcerer"}}
+REFERENCE_JSON: None
+----------------------------------------
+
+--- STEP 3: SEARCHING FOR POTENTIAL DUPLICATES OR TECHNICAL ENTRIES ---
+Found: ID: [sorcerer-ability-score-improvement-1] | Name: ASI (Чародей 4) | Has Choices: True
+Found: ID: [sorcerer-ability-score-improvement-2] | Name: ASI (Чародей 8) | Has Choices: True
+Found: ID: [sorcerer-ability-score-improvement-3] | Name: ASI (Чародей 12) | Has Choices: True
+Found: ID: [sorcerer-ability-score-improvement-4] | Name: ASI (Чародей 16) | Has Choices: True
+Found: ID: [sorcerer-ability-score-improvement-5] | Name: ASI (Чародей 19) | Has Choices: True
+Found: ID: [sorcerer-wild-magic-surge] | Name: Волна дикой магии | Has Choices: False
+Found: ID: [sorcerer-tides-of-chaos] | Name: Поток хаоса | Has Choices: False
+Found: ID: [sorcerer-bend-luck] | Name: Подчинение удачи | Has Choices: False
+Found: ID: [sorcerer-controlled-chaos] | Name: Контролируемый хаос | Has Choices: False
+Found: ID: [sorcerer-spell-bombardment] | Name: Бомбардировка заклинаниями | Has Choices: False
+Found: ID: [sorcerer-skill-choice-0] | Name: Навыки | Has Choices: True
+Found: ID: [sorcerer-1-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-1-spell-choice] | Name: Известные заклинания (Ур. 1) | Has Choices: True
+Found: ID: [sorcerer-2-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-2-spell-choice] | Name: Известные заклинания (Ур. 2) | Has Choices: True
+Found: ID: [sorcerer-3-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-3-spell-choice] | Name: Известные заклинания (Ур. 3) | Has Choices: True
+Found: ID: [sorcerer-4-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-4-spell-choice] | Name: Известные заклинания (Ур. 4) | Has Choices: True
+Found: ID: [sorcerer-5-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-5-spell-choice] | Name: Известные заклинания (Ур. 5) | Has Choices: True
+Found: ID: [sorcerer-6-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-6-spell-choice] | Name: Известные заклинания (Ур. 6) | Has Choices: True
+Found: ID: [sorcerer-7-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-7-spell-choice] | Name: Известные заклинания (Ур. 7) | Has Choices: True
+Found: ID: [sorcerer-8-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-8-spell-choice] | Name: Известные заклинания (Ур. 8) | Has Choices: True
+Found: ID: [sorcerer-9-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-9-spell-choice] | Name: Известные заклинания (Ур. 9) | Has Choices: True
+Found: ID: [sorcerer-10-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-10-spell-choice] | Name: Известные заклинания (Ур. 10) | Has Choices: True
+Found: ID: [sorcerer-11-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-11-spell-choice] | Name: Известные заклинания (Ур. 11) | Has Choices: True
+Found: ID: [sorcerer-12-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-12-spell-choice] | Name: Известные заклинания (Ур. 12) | Has Choices: True
+Found: ID: [sorcerer-13-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-13-spell-choice] | Name: Известные заклинания (Ур. 13) | Has Choices: True
+Found: ID: [sorcerer-14-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-14-spell-choice] | Name: Известные заклинания (Ур. 14) | Has Choices: True
+Found: ID: [sorcerer-15-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-15-spell-choice] | Name: Известные заклинания (Ур. 15) | Has Choices: True
+Found: ID: [sorcerer-16-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-16-spell-choice] | Name: Известные заклинания (Ур. 16) | Has Choices: True
+Found: ID: [sorcerer-17-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-17-spell-choice] | Name: Известные заклинания (Ур. 17) | Has Choices: True
+Found: ID: [sorcerer-18-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-18-spell-choice] | Name: Известные заклинания (Ур. 18) | Has Choices: True
+Found: ID: [sorcerer-19-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-19-spell-choice] | Name: Известные заклинания (Ур. 19) | Has Choices: True
+Found: ID: [sorcerer-20-cantrip-choice] | Name: Заговоры | Has Choices: True
+Found: ID: [sorcerer-20-spell-choice] | Name: Известные заклинания (Ур. 20) | Has Choices: True
+Found: ID: [sorcerer-4-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-5-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-6-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-7-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-8-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-9-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-10-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-11-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-12-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-13-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-14-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-15-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-16-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-17-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-18-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-19-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerer-20-asi] | Name: Увеличение характеристик | Has Choices: True
+Found: ID: [sorcerous-origin] | Name: Происхождение чародея | Has Choices: True
+Found: ID: [sorcerous-origin-improvement-1] | Name: Особенность происхождения чародея | Has Choices: False
+Found: ID: [sorcerous-origin-improvement-2] | Name: Особенность происхождения чародея | Has Choices: False
+Found: ID: [sorcerous-origin-improvement-3] | Name: Особенность происхождения чародея | Has Choices: False
+Found: ID: [sorcerous-restoration] | Name: Чародейское восстановление | Has Choices: False
+Found: ID: [draconic-resilience] | Name: Драконья устойчивость | Has Choices: False
+Found: ID: [draconic-presence] | Name: Драконье присутствие | Has Choices: False
