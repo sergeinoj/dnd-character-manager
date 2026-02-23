@@ -1,7 +1,0 @@
-2025-12-31 19:57:34,633 - INFO - Found 1 JSON files. Starting batch job...
-2025-12-31 19:57:34,633 - INFO - --- Processing: FIXED_5e-SRD-Magic-Items.json ---
-2025-12-31 19:57:34,652 - INFO - Backup created: FIXED_5e-SRD-Magic-Items.json.bak
-2025-12-31 19:57:34,671 - INFO - SUCCESS: Updated FIXED_5e-SRD-Magic-Items.json. Fixed records: 362
-2025-12-31 19:57:34,673 - INFO - --- BATCH COMPLETE ---
-2025-12-31 19:57:34,673 - INFO - Files Modified: 1
-2025-12-31 19:57:34,673 - INFO - Errors: 0

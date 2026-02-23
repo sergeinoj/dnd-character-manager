@@ -1,15 +1,158 @@
+# ============================================================
+# D&D Character Manager - GitIgnore
+# Security & DMCA Compliance
+# ============================================================
+
+# ===================
+# ANDROID / GRADLE
+# ===================
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+.gradle/
+build/
 local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# ===================
+# ANDROID STUDIO / IDEA
+# ===================
+.idea/
+*.ipr
+*.iws
+out/
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/deploymentTargetSelector.xml
+.idea/inspectionProfiles/
+
+# ===================
+# KOTLIN / JAVA
+# ===================
+*.class
+*.jar
+*.war
+*.ear
+*.log
+hs_err_pid*
+replay_pid*
+
+# ===================
+# PYTHON
+# ===================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv/
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ===================
+# OS GENERATED
+# ===================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ===================
+# GIT
+# ===================
+*.orig
+*.bak
+*.backup
+
+# ============================================================
+# CRITICAL: DMCA PROTECTION - EXPANDED DATA
+# ============================================================
+
+# Expanded JSON Data (non-SRD content)
+# These folders may contain copyrighted D&D content beyond SRD 5.1
+**/raw_json_expanded/
+**/expanded_data/
+**/custom_content/
+**/homebrew/
+
+# User databases (character saves)
+*user*.db
+*_user_*.db
+user_database.db
+
+# Expanded/Custom SRD databases
+# Only minimal SRD-only database should be committed
+dnd_expanded.db
+dnd_full.db
+dnd_complete.db
+*_expanded*.db
+*_full*.db
+
+# Backup databases
+*.db.bak
+*.db.backup
+*.db.old
+
+# ============================================================
+# SRD DATA - SELECTIVE COMMIT
+# ============================================================
+
+# The All_srd folder contains potentially expanded data
+# DO NOT COMMIT - may have expanded features/levels
+**/All_srd/
+
+# Bak folder (backups)
+**/Bak/
+
+# Wild shape forms with non-SRD monsters
+wild_shape_forms_localized.json
+*_custom_*.json
+*_expanded_*.json
+
+# ============================================================
+# LOGS & TEMP FILES
+# ============================================================
+*.log
+migration.log
+*.tmp
+*.temp
+
+# ============================================================
+# SECRETS & CREDENTIALS
+# ============================================================
+*.jks
+*.keystore
+keystore.properties
+secrets.properties
+api_keys.properties
+google-services.json
+*.pem
+*.key
+
+# ============================================================
+# MISC
+# ============================================================
+*.swp
+*.swo
+*~
